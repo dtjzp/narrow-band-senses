@@ -1,0 +1,58 @@
+{
+  "domain": "Radio telescope signal (GBT Breakthrough Listen -- Voyager 1 tracking)",
+  "canonical_encoding": "5-symbol (direct 2-bit level mapping)",
+  "h0": 2.107403,
+  "h2": 2.106958,
+  "h3": 2.105995,
+  "structure_score": 0.000668,
+  "sequential_score": 0.000666,
+  "shuffled_control": {
+    "h0": 2.107403,
+    "h3": 2.107372,
+    "structure_score": 1.5e-05
+  },
+  "mi_profile": {
+    "1": 0.000444,
+    "2": 0.000359,
+    "5": 0.000186,
+    "10": 0.000254,
+    "50": 9.3e-05,
+    "100": 0.000122,
+    "500": 0.000124
+  },
+  "n_chars": 1000000,
+  "n_chars_raw_data": 64000,
+  "n_tiles": 16,
+  "alphabet_size": 5,
+  "alphabet": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "alphabet_counts": {
+    "A": 120672,
+    "B": 205548,
+    "C": 359645,
+    "D": 257095,
+    "E": 57040
+  },
+  "raw_untiled": {
+    "n_chars": 64000,
+    "structure_score": 0.000336,
+    "h0": 2.107819,
+    "h3": 2.10711
+  },
+  "secondary_20bin_equalwidth": {
+    "note": "artefact from empty bins -- NOT canonical measure",
+    "structure_score": 0.000668,
+    "h0": 2.107403,
+    "h3": 2.105995,
+    "alphabet_size_effective": 5,
+    "encoding_notes": "Per-channel MAD-normalised Stokes-I power clipped to [p1,p99], then 20 equal-width bins. With only 5 unique power values, 15/20 bins are empty -- the reduced effective alphabet creates apparent structure (skewed unigrams) not present in the noise. Reported for disclosure, NOT used as the canonical measure."
+  },
+  "data_source": "Breakthrough Listen open data -- Green Bank Telescope (GBT), AGBT16A_999_17 (PI: Andrew Siemion, 2016). File: Voyager1_block1.npy -- raw baseband voltages, shape (64 coarse channels, 1000 time samples, 2 polarisations), dtype complex64. Receiver: Rcvr8_10 (8-10 GHz), sky source: Voyager 1 carrier at ~8.4 GHz. Data URL: http://blpd0.ssl.berkeley.edu/Voyager_data/",
+  "encoding_notes": "GBT 2-bit digitised voltages: I, Q each sampled to {-40,-12,12,40}. Stokes-I = |X_pol|^2 + |Y_pol|^2 gives exactly 5 discrete power levels {576, 2032, 3488, 4944, 6400}, mapped directly to symbols A-E. This is the honest encoding for 2-bit data. Raw sequence: 64,000 samples; tiled 16x to 1,000,000 chars (valid: GBT radiometer noise is stationary, each 1000-sample block i.i.d.).",
+  "interpretation": "NEAR-ZERO structure (score=0.0007) -- consistent with pure thermal radiometer noise from 2-bit digitised GBT data. Correct null result: character-level AI finds no exploitable regularities in radio telescope noise. This is the expected outcome for a SETI null observation."
+}

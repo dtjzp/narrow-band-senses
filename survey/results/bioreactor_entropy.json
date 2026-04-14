@@ -1,0 +1,128 @@
+{
+  "status": "ok",
+  "domain": "bioreactor process log",
+  "data_source": "Zenodo record 15630354 \u2014 'Real-time online monitoring of large-scale tubular photobioreactors through gas-phase composition analysis' (DOI: 10.5281/zenodo.15630354). Two campaigns: Oct 2024 (4321 min) and Dec 2024 (23243 min). Sensors: DO, pH, temperature, gas flow, CO2, biomass, PAR, humidity. 1-minute sampling interval.",
+  "encoding": "Each timestep encoded as N-character token (one char per sensor channel, 20 quantile bins A-T). Channels interleaved across time. NOTE: interleaved stream structure score is lower than per-channel because cross-sensor character transitions break within-sensor autocorr. Per-channel scores are the physically meaningful primary result.",
+  "primary_structure_score": 0.7494,
+  "primary_structure_score_note": "Mean of per-channel structure scores (physically meaningful). Interleaved stream score is reduced by cross-sensor transitions.",
+  "channels": [
+    "DO",
+    "pH",
+    "Tlin",
+    "COG",
+    "CCG",
+    "Biomass",
+    "FAir",
+    "FCO2",
+    "PAR",
+    "Pcomp",
+    "Pout",
+    "RHrecirc",
+    "T_RHrecirc",
+    "Tcomp"
+  ],
+  "n_timesteps": 27563,
+  "n_chars": 385882,
+  "n_bins": 20,
+  "alphabet_size": 20,
+  "alphabet": "ABCDEFGHIJKLMNOPQRST",
+  "entropy": {
+    "H0_unigram_bits": 4.254252,
+    "H_cond_bigram_bits": 4.150825,
+    "H_cond_trigram_bits": 3.747587,
+    "H_cond_4gram_bits": 2.896521,
+    "structure_score_interleaved": 0.119096,
+    "sequential_score_interleaved": 0.119057,
+    "structure_score_per_channel_mean": 0.7494,
+    "structure_score_per_channel_median": 0.798331,
+    "max_entropy_bits": 4.321928,
+    "H0_over_max": 0.984341
+  },
+  "shuffled_control": {
+    "H0_bits": 4.254252,
+    "H3_bits": 4.250047,
+    "structure_score": 0.000988
+  },
+  "mi_decay": {
+    "1": 0.103426,
+    "2": 0.129188,
+    "5": 0.055635,
+    "10": 0.067414,
+    "50": 0.061752,
+    "100": 0.128345,
+    "500": 0.065162
+  },
+  "per_channel": {
+    "DO": {
+      "H0": 4.322272,
+      "H3": 0.394352,
+      "structure_score": 0.908763
+    },
+    "pH": {
+      "H0": 4.081086,
+      "H3": 0.956186,
+      "structure_score": 0.765703
+    },
+    "Tlin": {
+      "H0": 4.319095,
+      "H3": 2.486293,
+      "structure_score": 0.424349
+    },
+    "COG": {
+      "H0": 4.322023,
+      "H3": 0.269102,
+      "structure_score": 0.937737
+    },
+    "CCG": {
+      "H0": 4.322256,
+      "H3": 0.196438,
+      "structure_score": 0.954552
+    },
+    "Biomass": {
+      "H0": 4.322273,
+      "H3": 0.730645,
+      "structure_score": 0.830958
+    },
+    "FAir": {
+      "H0": 2.91469,
+      "H3": 0.984234,
+      "structure_score": 0.66232
+    },
+    "FCO2": {
+      "H0": 1.600777,
+      "H3": 0.064107,
+      "structure_score": 0.959953
+    },
+    "PAR": {
+      "H0": 4.32072,
+      "H3": 1.948631,
+      "structure_score": 0.549003
+    },
+    "Pcomp": {
+      "H0": 2.130123,
+      "H3": 1.408832,
+      "structure_score": 0.338615
+    },
+    "Pout": {
+      "H0": 3.973235,
+      "H3": 0.445926,
+      "structure_score": 0.887767
+    },
+    "RHrecirc": {
+      "H0": 4.32227,
+      "H3": 1.287059,
+      "structure_score": 0.702226
+    },
+    "T_RHrecirc": {
+      "H0": 4.322272,
+      "H3": 0.318785,
+      "structure_score": 0.926246
+    },
+    "Tcomp": {
+      "H0": 4.322259,
+      "H3": 1.541267,
+      "structure_score": 0.643412
+    }
+  },
+  "elapsed_seconds": 5.0
+}

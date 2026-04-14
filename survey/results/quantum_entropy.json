@@ -1,0 +1,119 @@
+{
+  "domain": "Quantum circuit descriptions (OpenQASM 2.0)",
+  "data_source": "Generated with Qiskit 2.x circuit library. Total 1,587 circuits: 600 random (width 2-10, depth 2-20), 11 QFT (n=2-12), 630 VQE/EfficientSU2 (n=2-8, reps=1-3, random params), 21 Grover-style (n=2-8), 45 Bernstein-Vazirani (n=2-10), 280 QAOA-style (n=2-8, p=1-4, random angles). All serialised to OpenQASM 2.0, concatenated into character stream.",
+  "encoding_notes": "QASM is text-based: gate names (h, cx, rz, ccx, ...), qubit indices q[0], parameter expressions (pi/2, numeric floats), register declarations, semicolons, whitespace. Treated as raw character stream \u2014 character-level entropy measures the notation's sequential constraint. Pooled counting across all circuits. Two sub-corpora separated: random circuits vs algorithmically structured circuits.",
+  "n_circuits_total": 1587,
+  "n_circuits_random": 600,
+  "n_circuits_structured": 987,
+  "circuit_type_breakdown": {
+    "random": 600,
+    "qft": 11,
+    "vqe_efficient_su2": 630,
+    "grover_style": 21,
+    "bernstein_vazirani": 45,
+    "qaoa_style": 280
+  },
+  "top_chars_by_freq_pooled": {
+    " ": 142191,
+    "q": 140535,
+    "[": 113515,
+    "]": 113515,
+    "1": 95566,
+    ";": 94448,
+    "0": 90404,
+    "3": 83993,
+    "2": 83907,
+    "\n": 76287,
+    "4": 73473,
+    "5": 72773,
+    "6": 64222,
+    "7": 60032,
+    "8": 57153,
+    "9": 54512,
+    "r": 51915,
+    ",": 48561,
+    "c": 46748,
+    ".": 38726,
+    "(": 35793,
+    ")": 35793,
+    "x": 32909,
+    "e": 30678,
+    "a": 23857,
+    "s": 21780,
+    "z": 17063,
+    "m": 16354,
+    "y": 13304,
+    "u": 13109
+  },
+  "pooled": {
+    "n_chars": 1946326,
+    "alphabet_size": 57,
+    "h0": 4.937997,
+    "h2": 2.523448,
+    "h3": 1.72232,
+    "structure_score": 0.651211,
+    "sequential_score": 0.651184,
+    "shuffled_control": {
+      "h0": 4.937997,
+      "h3": 4.91065,
+      "structure_score": 0.005538
+    },
+    "mi_profile": {
+      "1": 2.414547,
+      "2": 2.16122,
+      "5": 1.474674,
+      "10": 0.839772,
+      "50": 0.383019,
+      "100": 0.176993,
+      "500": 0.015068
+    }
+  },
+  "random_circuits": {
+    "n_chars": 772872,
+    "alphabet_size": 57,
+    "h0": 4.936173,
+    "h2": 2.474928,
+    "h3": 1.498995,
+    "structure_score": 0.696324,
+    "sequential_score": 0.69626,
+    "shuffled_control": {
+      "h0": 4.936173,
+      "h3": 4.867543,
+      "structure_score": 0.013903
+    },
+    "mi_profile": {
+      "1": 2.461239,
+      "2": 2.166439,
+      "5": 1.449229,
+      "10": 0.908073,
+      "50": 0.30919,
+      "100": 0.174091,
+      "500": 0.004826
+    }
+  },
+  "structured_circuits": {
+    "n_chars": 1173453,
+    "alphabet_size": 54,
+    "h0": 4.859678,
+    "h2": 2.355651,
+    "h3": 1.762346,
+    "structure_score": 0.637353,
+    "sequential_score": 0.637304,
+    "shuffled_control": {
+      "h0": 4.859678,
+      "h3": 4.825625,
+      "structure_score": 0.007007
+    },
+    "mi_profile": {
+      "1": 2.504023,
+      "2": 2.322829,
+      "5": 1.707451,
+      "10": 1.058165,
+      "50": 0.629783,
+      "100": 0.287073,
+      "500": 0.027915
+    }
+  },
+  "primary_structure_score": 0.651211,
+  "primary_sequential_score": 0.651184
+}

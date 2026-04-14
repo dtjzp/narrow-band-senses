@@ -1,0 +1,73 @@
+{
+  "domain": "RNA secondary structure (dot-bracket / WUSS notation)",
+  "data_source": "Rfam CURRENT Rfam.seed.gz — consensus secondary structure (SS_cons) lines from Stockholm-format seed alignments for 4230 RNA families. Downloaded from https://ftp.ebi.ac.uk/pub/databases/Rfam/CURRENT/Rfam.seed.gz. Additional structures fetched via Rfam REST API for 30 representative families. Tiled to reach 1M chars.",
+  "encoding_notes": "Two representations analysed: (1) WUSS notation (13 symbols) — the full Rfam annotation including '<>()', '.', '_', ',', ':', '-', '[]', '{}' where different bracket pairs denote different pseudoknot levels and different single-stranded characters encode loop type context; (2) Normalised dot-bracket (3 symbols) — all bracket pairs collapsed to '()', all unpaired/gap characters collapsed to '.' — this is the canonical dot-bracket representation. Results below are for WUSS (primary) with normalised as secondary. HIGH structure score expected: bracket-matching grammar imposes long-range constraints — every '(' must be followed eventually by ')'.",
+  "n_chars": 1000000,
+  "primary_encoding": "WUSS (13 symbols)",
+  "h0": 2.9198,
+  "h2": 1.022167,
+  "h3": 0.932541,
+  "structure_score": 0.680615,
+  "sequential_score": 0.680612,
+  "shuffled_control": {
+    "h0": 2.9198,
+    "h3": 2.919251,
+    "structure_score": 0.000188,
+    "note": "Shuffling destroys all sequential structure; structure_score collapses to ~0, confirming the signal is genuine sequential constraint"
+  },
+  "mi_profile": {
+    "1": 1.897634,
+    "2": 1.535876,
+    "5": 1.00221,
+    "10": 0.593492,
+    "50": 0.197149,
+    "100": 0.123905,
+    "500": 0.061221
+  },
+  "alphabet_size": 13,
+  "alphabet": ["(", ")", ",", "-", ".", ":", "<", ">", "[", "]", "_", "{", "}"],
+  "alphabet_counts": {
+    "<": 195096,
+    ">": 195085,
+    ":": 161088,
+    "_": 138017,
+    ".": 125263,
+    "-": 109216,
+    ",": 31157,
+    "(": 15382,
+    ")": 15382,
+    "[": 4478,
+    "]": 4478,
+    "{": 2679,
+    "}": 2679
+  },
+  "normalised_dot_bracket": {
+    "encoding": "All bracket pairs -> '()'; all unpaired/gap chars ('.', '_', ',', ':', '-') -> '.'",
+    "alphabet_size": 3,
+    "alphabet": ["(", ")", "."],
+    "alphabet_counts": {
+      "(": 217635,
+      ")": 217624,
+      ".": 564741
+    },
+    "h0": 1.4231,
+    "h2": 0.7184,
+    "h3": 0.6662,
+    "structure_score": 0.5319,
+    "sequential_score": 0.5319,
+    "shuffled_control": {
+      "structure_score": 0.0,
+      "note": "Perfectly shuffled; parentheses become random so structure score collapses"
+    },
+    "mi_profile": {
+      "1": 0.7047,
+      "2": 0.4676,
+      "5": 0.2114,
+      "10": 0.0822,
+      "50": 0.0428,
+      "100": 0.016,
+      "500": 0.0083
+    }
+  },
+  "interpretation": "Both encodings show strong sequential structure. WUSS: structure_score=0.681 (very high), H3 drops from H0=2.92 to 0.93 bits — a 68% reduction in uncertainty given 2 preceding characters. Normalised dot-bracket: structure_score=0.532 — still high. MI decays slowly (MI=0.06 bits even at lag=500 in WUSS), indicating long-range bracket-pairing correlations. Shuffled control collapses to ~0 in both cases, confirming all structure is sequential. This is expected from bracket-matching grammar: open brackets are statistically constrained to be followed by matching close brackets, creating deterministic long-range dependencies. RNA dot-bracket is among the most structured natural encodings measurable."
+}

@@ -1,0 +1,134 @@
+{
+  "dataset": "UK National Highways WebTRIS",
+  "site_id": "2",
+  "site_description": "MIDAS site at A1M/2259B, Southbound",
+  "source": "https://webtris.highwaysengland.co.uk/api/v1",
+  "period": "January 2023 - December 2023",
+  "sampling_resolution": "hourly (aggregated from 15-min intervals)",
+  "channel": "Total vehicle count per hour",
+  "n_hours": 8724,
+  "date_range": {
+    "start": "2023-01-01 00:00:00",
+    "end": "2023-12-31 23:00:00"
+  },
+  "count_stats": {
+    "min": 0.0,
+    "max": 2219.0,
+    "mean": 684.2,
+    "std": 494.7
+  },
+  "discretisation": {
+    "method": "quantile (equal-occupancy)",
+    "n_bins": 20,
+    "alphabet": "ABCDEFGHIJKLMNOPQRST",
+    "actual_bins_used": 20
+  },
+  "entropy": {
+    "H0_unigram_bits": 4.322975,
+    "H_max_bits": 4.321928,
+    "H_cond_bigram_bits": 2.804344,
+    "H_cond_trigram_bits": 2.209673,
+    "H_cond_4gram_bits": 1.741344,
+    "structure_score": 0.488854,
+    "sequential_score": 0.487982,
+    "compression_proxy_H2_over_H0": 0.648707,
+    "compression_proxy_H3_over_H0": 0.511146
+  },
+  "shuffled_control": {
+    "H0_bits": 4.322975,
+    "H_cond_bigram_bits": 4.315618,
+    "structure_score": 0.106478
+  },
+  "bootstrap": {
+    "n_samples": 200,
+    "subsample_frac": 0.3,
+    "structure_score_mean": 0.529408,
+    "structure_score_ci_low": 0.520709,
+    "structure_score_ci_high": 0.538918,
+    "sequential_score_mean": 0.525518,
+    "sequential_score_ci_low": 0.516725,
+    "sequential_score_ci_high": 0.535064
+  },
+  "mi_decay": {
+    "1": 1.518631,
+    "2": 0.933005,
+    "6": 0.167798,
+    "12": 0.611665,
+    "24": 1.135441,
+    "48": 0.860592,
+    "72": 0.73624,
+    "168": 1.538456,
+    "336": 1.284619
+  },
+  "per_weekday": {
+    "Mon": {
+      "n_hours": 1248,
+      "H0_bits": 4.238548,
+      "H_cond_bigram_bits": 2.661991,
+      "structure_score": 0.578271
+    },
+    "Tue": {
+      "n_hours": 1248,
+      "H0_bits": 4.288299,
+      "H_cond_bigram_bits": 2.787791,
+      "structure_score": 0.600505
+    },
+    "Wed": {
+      "n_hours": 1230,
+      "H0_bits": 4.246717,
+      "H_cond_bigram_bits": 2.802336,
+      "structure_score": 0.583894
+    },
+    "Thu": {
+      "n_hours": 1230,
+      "H0_bits": 4.253084,
+      "H_cond_bigram_bits": 2.742272,
+      "structure_score": 0.567813
+    },
+    "Fri": {
+      "n_hours": 1248,
+      "H0_bits": 4.284481,
+      "H_cond_bigram_bits": 2.658582,
+      "structure_score": 0.57984
+    },
+    "Sat": {
+      "n_hours": 1248,
+      "H0_bits": 4.199602,
+      "H_cond_bigram_bits": 2.459344,
+      "structure_score": 0.585054
+    },
+    "Sun": {
+      "n_hours": 1272,
+      "H0_bits": 4.151395,
+      "H_cond_bigram_bits": 2.31962,
+      "structure_score": 0.63771
+    }
+  },
+  "hourly_profile_mean_counts": {
+    "0": 85.5,
+    "1": 70.0,
+    "2": 79.5,
+    "3": 105.9,
+    "4": 203.5,
+    "5": 424.3,
+    "6": 751.8,
+    "7": 988.4,
+    "8": 1025.6,
+    "9": 948.9,
+    "10": 978.4,
+    "11": 1042.9,
+    "12": 1058.4,
+    "13": 1115.0,
+    "14": 1174.9,
+    "15": 1222.0,
+    "16": 1263.3,
+    "17": 1185.4,
+    "18": 905.5,
+    "19": 714.3,
+    "20": 494.3,
+    "21": 285.1,
+    "22": 194.2,
+    "23": 122.8
+  },
+  "elapsed_seconds": 1.0
+}

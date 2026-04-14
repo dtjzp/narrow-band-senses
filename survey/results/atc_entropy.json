@@ -1,0 +1,95 @@
+{
+  "domain": "Air traffic control (ADS-B flight tracks)",
+  "data_source": "OpenSky Network REST API (https://opensky-network.org/api). No authentication required for live state vectors. 1,070 aircraft tracks collected 2026-04-11 by polling /states/all across 5 European and North American airspace regions (Central Europe, NW Europe, France, NE USA, W USA). ~40 polls over ~10 minutes, 12s interval. ADS-B transponder data aggregated by OpenSky Network (Sch\u00e4fer et al. 2014). Aircraft: 1,110 unique ICAO24 addresses observed; 1,070 with >=10 observations.",
+  "encoding_notes": "Each ADS-B state vector (~15s interval) encoded as 3 characters: (1) ALTITUDE: baro_altitude (metres) -> feet -> 20 bins of 2,500ft each (0-50,000ft) -> A-T. (2) HEADING: true_track (0-360 deg) -> 8 compass octants (N/NE/E/SE/S/SW/W/NW) -> 0-7. (3) SPEED: velocity (m/s) -> knots -> 10 bins of 60kt each (0-600kt) -> a-j. Each flight is a separate sequence (pooled counting, no cross-flight concatenation). Observations deduplicated by timestamp (same aircraft visible in multiple region queries). HIGH structure expected: aircraft follow physics (limited turn/climb rates), follow airways (standard routes), obey ATC instructions. Strong per-channel autocorrelation: altitude/speed/heading all smooth over time.",
+  "n_chars": 91518,
+  "alphabet_size": 38,
+  "alphabet": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j"
+  ],
+  "h0": 4.745544,
+  "h0_max": 5.247928,
+  "h2": 2.652786,
+  "h3": 2.015182,
+  "structure_score": 0.575353,
+  "sequential_score": 0.575067,
+  "mi_profile": {
+    "1": 2.058402,
+    "2": 2.087607,
+    "5": 2.039672,
+    "10": 1.954364,
+    "50": 1.72625,
+    "100": 1.637706,
+    "500": 1.622723
+  },
+  "shuffled_control": {
+    "h0": 4.745544,
+    "h2": 4.74235,
+    "h3": 4.557036,
+    "structure_score": 0.039723
+  },
+  "per_channel": {
+    "altitude": {
+      "h0": 3.656648,
+      "h3": 0.364552,
+      "structure_score": 0.900304,
+      "alphabet_size": 20
+    },
+    "heading": {
+      "h0": 2.909483,
+      "h3": 0.322003,
+      "structure_score": 0.889326,
+      "alphabet_size": 8
+    },
+    "speed": {
+      "h0": 2.91558,
+      "h3": 0.265543,
+      "structure_score": 0.908923,
+      "alphabet_size": 10
+    }
+  },
+  "per_channel_mean_structure": 0.899518,
+  "track_stats": {
+    "n_sequences": 1070,
+    "min_seq_len": 30,
+    "max_seq_len": 174,
+    "median_seq_len": 96
+  }
+}

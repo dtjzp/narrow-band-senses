@@ -1,0 +1,98 @@
+{
+  "domain": "Satellite orbital telemetry (TLE format)",
+  "tier": "B",
+  "data_source": "CelesTrak NORAD Two-Line Element (TLE) sets \u2014 active satellite catalogue. Source: https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle Downloaded 2026-04-11. Each TLE entry consists of 2 lines of 69 characters encoding orbital elements: epoch, eccentricity, inclination, RAAN, argument of perigee, mean motion, B* drag term, and satellite identifiers. Format is fixed-width ASCII with strict column assignments and checksums.",
+  "encoding_notes": "TLE corpus treated as raw text (the TLE format IS the notation). Processing: line-1 and line-2 of each TLE concatenated with a separator character '|'. Each TLE pair \u2192 69 + 1 + 69 + 1 = 140 characters. Character set: digits 0-9, letters A-Z, '.', '+', '-', ' '. HIGH structure expected: TLEs use fixed-width columns, limited character set (digits dominate), and physical constraints on orbital elements (e.g., eccentricity 0-1, inclination 0-180\u00b0, mean motion ~1-16 rev/day). Strong positional (column-level) structure expected to yield very low H3.",
+  "source_label": "CelesTrak active satellites TLE (~6000+ sats)",
+  "n_tle_pairs": 15001,
+  "chars_per_tle": 140,
+  "total_chars_available": 2100140,
+  "chars_analysed": 1000000,
+  "raw_text": {
+    "n_chars": 1000000,
+    "alphabet_size": 39,
+    "h0": 3.675674,
+    "h0_max": 5.285402,
+    "h2": 3.309141,
+    "h3": 2.849942,
+    "structure_score": 0.224648,
+    "sequential_score": 0.22457,
+    "shuffled_control": {
+      "h0": 3.675674,
+      "h3": 3.666944,
+      "structure_score": 0.002375
+    },
+    "mi_profile": {
+      "1": 0.366534,
+      "2": 0.278115,
+      "5": 0.260536,
+      "10": 0.174993,
+      "50": 0.211586,
+      "100": 0.217643,
+      "500": 0.202349
+    }
+  },
+  "field_encoding": {
+    "n_bins": 20,
+    "n_tles_parsed": 15001,
+    "fields": {
+      "inclination_deg": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322064,
+        "h3": 1.830644,
+        "structure_score": 0.576442
+      },
+      "eccentricity": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322554,
+        "h3": 3.438665,
+        "structure_score": 0.204483
+      },
+      "mean_motion_rev_per_day": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322561,
+        "h3": 1.925411,
+        "structure_score": 0.554567
+      },
+      "bstar_drag": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.31498,
+        "h3": 3.357259,
+        "structure_score": 0.221953
+      },
+      "raan_deg": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322561,
+        "h3": 1.528744,
+        "structure_score": 0.646334
+      },
+      "arg_perigee_deg": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322554,
+        "h3": 3.196408,
+        "structure_score": 0.260528
+      },
+      "mean_anomaly_deg": {
+        "n_values": 15001,
+        "alphabet_size": 20,
+        "h0": 4.322561,
+        "h3": 3.287764,
+        "structure_score": 0.239394
+      }
+    },
+    "per_field_mean_structure_score": 0.386243
+  },
+  "structure_score": 0.224648,
+  "sequential_score": 0.22457,
+  "h0": 3.675674,
+  "h2": 3.309141,
+  "h3": 2.849942,
+  "n_chars": 1000000,
+  "alphabet_size": 39
+}

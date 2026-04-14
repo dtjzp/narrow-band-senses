@@ -1,0 +1,251 @@
+{
+  "description": "MIDI entropy analysis \u2014 classical piano corpus",
+  "corpus": {
+    "source": "cheriell/ClassicalPianoMIDI-dataset (piano-midi.de, public domain)",
+    "n_files": 330,
+    "n_notes": 785299,
+    "n_composers": 26,
+    "alphabet_size": 87,
+    "note_range_midi": [
+      21,
+      107
+    ]
+  },
+  "encoding": {
+    "method": "note_number_to_char",
+    "formula": "chr(33 + (note - 21) % 94)",
+    "notes": "Maps MIDI note 21-107 (piano range, 87 values) to 87 distinct printable ASCII chars with no collision"
+  },
+  "entropy": {
+    "h0": 5.7771,
+    "h0_max": 6.4429,
+    "h2": 5.2516,
+    "h3": 4.5083,
+    "h0_shuffled": 5.7716,
+    "h2_shuffled": 5.7653,
+    "h3_shuffled": 5.3295
+  },
+  "structure_scores": {
+    "structure_score": 0.2196,
+    "sequential_score": 0.218
+  },
+  "bootstrap_cis": {
+    "mean": 0.4692,
+    "ci_low": 0.4597,
+    "ci_high": 0.4743,
+    "seq_mean": 0.4646,
+    "seq_ci_low": 0.4549,
+    "seq_ci_high": 0.4698
+  },
+  "mi_decay": {
+    "1": 0.5136,
+    "2": 0.3104,
+    "5": 0.2959,
+    "10": 0.2664,
+    "50": 0.1222,
+    "100": 0.0833,
+    "500": 0.0311
+  },
+  "pitch_class_encoding": {
+    "h0": 3.5733,
+    "h0_max": 3.585,
+    "h3": 3.2365,
+    "structure_score": 0.0943
+  },
+  "per_composer": {
+    "Albeniz": {
+      "n_notes": 25534,
+      "n_files": 14,
+      "h0": 5.4803,
+      "h3": 2.501,
+      "structure_score": 0.5436
+    },
+    "Bach": {
+      "n_notes": 4632,
+      "n_files": 3,
+      "h0": 5.1011,
+      "h3": 2.1505,
+      "structure_score": 0.5784
+    },
+    "Balakirev": {
+      "n_notes": 8042,
+      "n_files": 1,
+      "h0": 5.7532,
+      "h3": 2.1288,
+      "structure_score": 0.63
+    },
+    "Beethoven": {
+      "n_notes": 111205,
+      "n_files": 29,
+      "h0": 5.7672,
+      "h3": 3.7068,
+      "structure_score": 0.3573
+    },
+    "Borodin": {
+      "n_notes": 6204,
+      "n_files": 7,
+      "h0": 5.4439,
+      "h3": 1.7557,
+      "structure_score": 0.6775
+    },
+    "Brahms": {
+      "n_notes": 26359,
+      "n_files": 10,
+      "h0": 5.8467,
+      "h3": 2.9317,
+      "structure_score": 0.4986
+    },
+    "Burgmueller": {
+      "n_notes": 9362,
+      "n_files": 9,
+      "h0": 5.4939,
+      "h3": 1.7382,
+      "structure_score": 0.6836
+    },
+    "Chopin": {
+      "n_notes": 85355,
+      "n_files": 48,
+      "h0": 5.7475,
+      "h3": 3.399,
+      "structure_score": 0.4086
+    },
+    "Christmas": {
+      "n_notes": 14440,
+      "n_files": 5,
+      "h0": 5.6207,
+      "h3": 2.5144,
+      "structure_score": 0.5527
+    },
+    "Clementi": {
+      "n_notes": 19177,
+      "n_files": 17,
+      "h0": 5.057,
+      "h3": 2.6017,
+      "structure_score": 0.4855
+    },
+    "Debussy": {
+      "n_notes": 13778,
+      "n_files": 10,
+      "h0": 5.551,
+      "h3": 2.5173,
+      "structure_score": 0.5465
+    },
+    "Godowsky": {
+      "n_notes": 3205,
+      "n_files": 2,
+      "h0": 5.7387,
+      "h3": 1.3675,
+      "structure_score": 0.7617
+    },
+    "Granados": {
+      "n_notes": 5704,
+      "n_files": 3,
+      "h0": 5.3063,
+      "h3": 1.2668,
+      "structure_score": 0.7613
+    },
+    "Grieg": {
+      "n_notes": 20992,
+      "n_files": 16,
+      "h0": 5.611,
+      "h3": 2.3769,
+      "structure_score": 0.5764
+    },
+    "Haydn": {
+      "n_notes": 30970,
+      "n_files": 21,
+      "h0": 5.1861,
+      "h3": 2.7612,
+      "structure_score": 0.4676
+    },
+    "Liszt": {
+      "n_notes": 89457,
+      "n_files": 16,
+      "h0": 6.0107,
+      "h3": 3.6393,
+      "structure_score": 0.3945
+    },
+    "Mendelssohn": {
+      "n_notes": 20749,
+      "n_files": 15,
+      "h0": 5.3662,
+      "h3": 2.689,
+      "structure_score": 0.4989
+    },
+    "Moszkowski": {
+      "n_notes": 2914,
+      "n_files": 1,
+      "h0": 5.488,
+      "h3": 0.8777,
+      "structure_score": 0.8401
+    },
+    "Mozart": {
+      "n_notes": 68227,
+      "n_files": 21,
+      "h0": 5.235,
+      "h3": 3.362,
+      "structure_score": 0.3578
+    },
+    "Mussorgsky": {
+      "n_notes": 16149,
+      "n_files": 8,
+      "h0": 5.808,
+      "h3": 2.1919,
+      "structure_score": 0.6226
+    },
+    "Rachmaninoff": {
+      "n_notes": 21270,
+      "n_files": 10,
+      "h0": 5.7644,
+      "h3": 2.6635,
+      "structure_score": 0.5379
+    },
+    "Ravel": {
+      "n_notes": 21200,
+      "n_files": 5,
+      "h0": 5.912,
+      "h3": 2.4805,
+      "structure_score": 0.5804
+    },
+    "Schubert": {
+      "n_notes": 121390,
+      "n_files": 29,
+      "h0": 5.732,
+      "h3": 3.6386,
+      "structure_score": 0.3652
+    },
+    "Schumann": {
+      "n_notes": 27432,
+      "n_files": 24,
+      "h0": 5.5087,
+      "h3": 2.8902,
+      "structure_score": 0.4754
+    },
+    "Sinding": {
+      "n_notes": 1784,
+      "n_files": 1,
+      "h0": 5.0645,
+      "h3": 1.083,
+      "structure_score": 0.7862
+    },
+    "Tchaikovsky": {
+      "n_notes": 9768,
+      "n_files": 5,
+      "h0": 5.3733,
+      "h3": 2.0605,
+      "structure_score": 0.6165
+    }
+  },
+  "interpretation": {
+    "pooled_structure_score_note": "The pooled structure score (0.2196) is lower than the bootstrap (0.47) because pooling 330 pieces across 26 composers destroys key-level context: Beethoven in C major and Bach in D minor share no harmonic neighbourhood. The bootstrap on a 50K contiguous block captures genuine within-piece structure. Per-composer scores (0.36-0.84) confirm high local harmonic structure.",
+    "surprise": "MIDI note entropy is LOWER than English text at the corpus level (0.22 vs 0.35), because the cross-composer pooling flattens context. Within pieces, music shows much higher structure (0.47 bootstrap, up to 0.84 for Moszkowski). Pitch-class structure is low (0.09) because 12-tone modular reduction destroys octave information and heavily aliases context."
+  },
+  "reference_values": {
+    "english_h0": 4.176,
+    "english_structure_score": 0.349,
+    "smiles_structure_score": 0.47,
+    "tidal_structure_score": 0.655,
+    "description": "English and SMILES from NBS-Experiment-1; tidal from NBS-Tidal"
+  },
+  "elapsed_seconds": 87.5
+}

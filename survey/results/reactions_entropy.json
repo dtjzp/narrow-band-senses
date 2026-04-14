@@ -1,0 +1,17 @@
+{
+  "dataset": "USPTO reaction SMILES (Figshare 22491730)",
+  "source_file": "reactionSmiles.txt",
+  "n_reactions": 733610,
+  "total_characters": 82149620,
+  "alphabet_size": 65,
+  "alphabet": " #()*+-./123456789:=>@ABCEFGHIKLMNOPRSTVWXYZ[\\]abcdefghilmnorstu~",
+  "H0_bits": 3.209291,
+  "H1_conditional_bits": 2.371203,
+  "H2_conditional_bits": 1.90733,
+  "H_max_bits": 6.022368,
+  "H0_normalised": 0.532895,
+  "structure_score": 0.405685,
+  "n_unigrams": 65,
+  "n_bigrams": 707,
+  "n_trigrams": 3776
+}

@@ -1,0 +1,52 @@
+{
+  "dataset": "CICIDS2017",
+  "file": "Monday-WorkingHours.pcap_ISCX.csv",
+  "source": "https://huggingface.co/datasets/c01dsnap/CIC-IDS2017",
+  "n_flows": 529918,
+  "stream_length": 2649590,
+  "chars_per_flow": 5,
+  "alphabet_size": 12,
+  "alphabet": "0123456789CT",
+  "label_distribution": {
+    "BENIGN": 529918
+  },
+  "entropy": {
+    "H0_unigram_bits": 2.85694,
+    "H_cond_bigram_bits": 1.990946,
+    "H_cond_trigram_bits": 1.451227,
+    "H_cond_4gram_bits": 1.079441,
+    "structure_score": 0.492034,
+    "sequential_score": 0.492032,
+    "shuffled_H0_bits": 2.85694,
+    "shuffled_H_cond_bigram_bits": 2.856925,
+    "compression_proxy_H2_over_H0": 0.696881,
+    "compression_proxy_H3_over_H0": 0.507966
+  },
+  "bootstrap": {
+    "n_samples": 100,
+    "subsample_frac": 0.2,
+    "structure_score_mean": 0.523441,
+    "structure_score_ci_low": 0.495814,
+    "structure_score_ci_high": 0.541755,
+    "sequential_score_mean": 0.523432,
+    "sequential_score_ci_low": 0.495803,
+    "sequential_score_ci_high": 0.541747
+  },
+  "mi_decay": {
+    "1": 0.865994,
+    "2": 0.72492,
+    "5": 1.0719,
+    "10": 1.04557,
+    "50": 0.989128,
+    "100": 0.97279
+  },
+  "per_protocol": {
+    "T": {
+      "n_flows": 529918,
+      "H0_bits": 2.85694,
+      "H_cond_bigram_bits": 1.990946,
+      "structure_score": 0.492034
+    }
+  },
+  "elapsed_seconds": 302.6
+}

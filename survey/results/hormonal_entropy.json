@@ -1,0 +1,72 @@
+{
+  "domain": "hormonal_cycle",
+  "h0": 4.322456,
+  "h2": 1.925064,
+  "h3": 1.099959,
+  "structure_score": 0.745524,
+  "sequential_score": 0.739252,
+  "mi_profile": {
+    "1": 2.758185,
+    "2": 2.482109,
+    "5": 2.012651,
+    "10": 1.727034,
+    "50": 0.828347,
+    "100": 0.311148
+  },
+  "n_chars": 90000,
+  "alphabet_size": 20,
+  "data_source": "iurteaga/hmc realistic_dataset.pickle (MLHC 2019). Clark ODE model simulation of HPO axis (60 cycles x 300 steps x 5 channels). Channels: LH, FSH, E2, P4, Ih. Validated mechanistic simulation; real data (Marquette NFP, PhysioNet mcPHASES) requires institutional DUA agreements not available for automated download.",
+  "encoding_notes": "20 equal-frequency quantile bins per channel (global bins across all cycles). Each cycle encoded as separate sequence; pooled counting without cross-cycle concatenation. Canonical metric = per-channel mean structure score (matching bioreactor precedent). Combined interleaved stream (5 chars/timestep) also computed for comparison.",
+  "per_channel": {
+    "LH": {
+      "h0": 4.322456,
+      "h3": 0.944978,
+      "structure_score": 0.781379,
+      "sequential_score": 0.774771,
+      "shuffled_structure_score": 0.036156,
+      "mi_lag1": 2.758185
+    },
+    "FSH": {
+      "h0": 4.322456,
+      "h3": 1.210262,
+      "structure_score": 0.720006,
+      "sequential_score": 0.713897,
+      "shuffled_structure_score": 0.037876,
+      "mi_lag1": 2.332793
+    },
+    "E2": {
+      "h0": 4.322456,
+      "h3": 1.262067,
+      "structure_score": 0.708021,
+      "sequential_score": 0.701938,
+      "shuffled_structure_score": 0.037837,
+      "mi_lag1": 1.998142
+    },
+    "P4": {
+      "h0": 4.322456,
+      "h3": 0.931131,
+      "structure_score": 0.784583,
+      "sequential_score": 0.778038,
+      "shuffled_structure_score": 0.035863,
+      "mi_lag1": 2.484047
+    },
+    "Ih": {
+      "h0": 4.322456,
+      "h3": 1.151358,
+      "structure_score": 0.733633,
+      "sequential_score": 0.727617,
+      "shuffled_structure_score": 0.036813,
+      "mi_lag1": 2.288245
+    }
+  },
+  "combined_interleaved": {
+    "h0": 4.322034,
+    "h3": 1.957865,
+    "structure_score": 0.547004,
+    "sequential_score": 0.545737,
+    "n_chars": 90000,
+    "alphabet_size": 20
+  },
+  "n_cycles": 60,
+  "n_timesteps_per_cycle": 300
+}

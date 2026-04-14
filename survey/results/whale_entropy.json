@@ -1,0 +1,108 @@
+{
+  "domain": "Humpback whale song (audio)",
+  "data_source": "NOAA/PMEL humpback whale song via Internet Archive (WhaleSong_928, Public Domain \u2014 https://archive.org/details/WhaleSong_928); Monterey Bay Aquarium Research Institute (MBARI) humpback whale recordings via Internet Archive (humpbackwhalesongs, CC0 \u2014 https://archive.org/details/humpbackwhalesongs). 4 recordings: 13min (NOAA) + 120min + 80min + 155min (MBARI) = ~368min total. Downloaded 2026-04-11.",
+  "encoding_notes": "Audio resampled to 8000Hz mono. Mel spectrogram: 32 mel bands, 20ms hop (= 0.020s frame resolution), frequency range 80-3500Hz (humpback vocal range). Per-frame energy (RMS): frames below 15th percentile discarded as silence. Active frames: dominant mel bin (argmax across 32 bands) extracted. Dominant bin (0-31) linearly mapped to 20 discrete bins, each encoded as a character A-T. Each character represents ~20ms of audio (~20 pitch regions from 80Hz to 3500Hz). HIGH structure score expected: humpback songs are hierarchically organised \u2014 units -> phrases -> themes -> songs \u2014 with strong sequential repetition.",
+  "audio_files": [
+    {
+      "file": "NOAA_whale_song.mp3",
+      "description": "NOAA humpback whale song (13min, 44.1kHz, Public Domain)",
+      "n_frames": 33285,
+      "active_fraction": 0.85
+    },
+    {
+      "file": "MBARI_humpback_whale.mp3",
+      "description": "MBARI humpback whale (120min, 16kHz, CC0)",
+      "n_frames": 306000,
+      "active_fraction": 0.85
+    },
+    {
+      "file": "MBARI_humpback_2016.mp3",
+      "description": "MBARI humpback whale 2016 session (80min, 16kHz, CC0)",
+      "n_frames": 204012,
+      "active_fraction": 0.85
+    },
+    {
+      "file": "MBARI_humpback_2017a.mp3",
+      "description": "MBARI humpback whale 2017 session-1 (155min, 16kHz, CC0)",
+      "n_frames": 395253,
+      "active_fraction": 0.85
+    }
+  ],
+  "audio_processing": {
+    "sample_rate_hz": 8000,
+    "n_mels": 32,
+    "hop_length_samples": 160,
+    "frame_duration_ms": 20.0,
+    "fmin_hz": 80,
+    "fmax_hz": 3500,
+    "n_bins": 20,
+    "silence_percentile_threshold": 15,
+    "encoding": "dominant mel bin (argmax) per active frame, linearly mapped to N_BINS"
+  },
+  "n_chars": 938550,
+  "alphabet_size": 20,
+  "alphabet": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T"
+  ],
+  "bin_counts": {
+    "A": 430294,
+    "B": 206763,
+    "C": 73159,
+    "D": 79775,
+    "E": 14208,
+    "F": 34309,
+    "G": 28130,
+    "H": 7857,
+    "I": 11363,
+    "J": 4003,
+    "K": 10899,
+    "L": 14426,
+    "M": 2855,
+    "N": 3849,
+    "O": 2882,
+    "P": 4677,
+    "Q": 3135,
+    "R": 2351,
+    "S": 2889,
+    "T": 726
+  },
+  "h0": 2.543747,
+  "h0_max_possible": 4.321928,
+  "h2": 0.570739,
+  "h3": 0.567138,
+  "structure_score": 0.777046,
+  "sequential_score": 0.77704,
+  "shuffled_control": {
+    "h0": 2.543747,
+    "h3": 2.541216,
+    "structure_score": 0.000995
+  },
+  "mi_profile": {
+    "1": 1.973011,
+    "2": 1.615412,
+    "5": 1.040241,
+    "10": 0.699833,
+    "50": 0.184493,
+    "100": 0.076662,
+    "500": 0.04627
+  }
+}

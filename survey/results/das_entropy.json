@@ -1,0 +1,62 @@
+{
+  "domain": "das_seismic",
+  "h0": 4.212948,
+  "h3": 2.723402,
+  "structure_score": 0.354007,
+  "sequential_score": 0.353597,
+  "mi_profile": {
+    "1": 1.373217,
+    "2": 0.740539,
+    "5": 0.777824,
+    "10": 0.496623,
+    "50": 0.163763,
+    "100": 0.13013,
+    "500": 0.108892
+  },
+  "n_chars": 11520000,
+  "alphabet_size": 20,
+  "data_source": "PoroTomo Brady Hot Springs vertical DAS array (DOE GDR submission 848). Silixa iDAS025, 384 channels, 1.021 m spacing, 1000 Hz, 30 s recording. M3.4 earthquake, March 2016. Public domain DOE data.",
+  "encoding_notes": "20 equal-frequency quantile bins (global across all channels). Each channel encoded as separate sequence; pooled counting without cross-channel concatenation. Canonical metric = per-channel mean structure score (matching WiFi CSI / bioreactor precedent). Interleaved stream (384 chars/timestep) also computed for cross-channel structure comparison.",
+  "per_channel_summary": {
+    "mean_structure": 0.354007,
+    "min_structure": 0.256757,
+    "max_structure": 0.523489,
+    "std_structure": 0.045378,
+    "n_channels": 384
+  },
+  "pooled": {
+    "h0": 4.321929,
+    "h2": 2.948649,
+    "h3": 2.816977,
+    "structure_score": 0.348213,
+    "sequential_score": 0.348191,
+    "shuffled_structure_score": 3.3e-05,
+    "mi_profile": {
+      "1": 1.373217,
+      "2": 0.740539,
+      "5": 0.777824,
+      "10": 0.496623,
+      "50": 0.163763,
+      "100": 0.13013,
+      "500": 0.108892
+    },
+    "n_chars": 11520000
+  },
+  "interleaved": {
+    "h0": 4.321929,
+    "h2": 2.28993,
+    "h3": 2.260256,
+    "structure_score": 0.477026,
+    "sequential_score": 0.477025,
+    "n_chars": 11520000
+  },
+  "predictions": {
+    "P1_perchannel_moderate_to_high": "CONFIRMED: mean per-channel structure = 0.3540",
+    "P2_pooled_gt_perchannel": "DISCONFIRMED: pooled=0.3482 vs per-channel mean=0.3540, gap=-0.0058",
+    "P3_scaling_flat": "pending_colab"
+  },
+  "n_samples": 30000,
+  "n_channels": 384,
+  "sample_rate_hz": 1000,
+  "duration_s": 30
+}
