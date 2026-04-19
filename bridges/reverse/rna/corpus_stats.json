@@ -1,0 +1,18 @@
+{
+  "n_pairs": 1280,
+  "dist_before": {
+    "simple-hairpin": 675,
+    "multiloop": 527,
+    "nested-helical": 3869,
+    "bulge-rich": 1369
+  },
+  "dist_after": {
+    "simple-hairpin": 320,
+    "multiloop": 320,
+    "nested-helical": 320,
+    "bulge-rich": 320
+  },
+  "skipped": [],
+  "roundtrip_rate": 1.0,
+  "target_per_cat": 320
+}

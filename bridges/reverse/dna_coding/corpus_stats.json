@@ -1,0 +1,21 @@
+{
+  "n_pairs": 1280,
+  "dist_before": {
+    "low-GC": 451,
+    "mid-GC": 1607,
+    "high-GC": 1415,
+    "homopolymer-rich": 0,
+    "with-ORF": 4011
+  },
+  "dist_after": {
+    "low-GC": 320,
+    "mid-GC": 320,
+    "high-GC": 320,
+    "with-ORF": 320
+  },
+  "skipped": [
+    "homopolymer-rich"
+  ],
+  "roundtrip_rate": 1.0,
+  "target_per_cat": 320
+}

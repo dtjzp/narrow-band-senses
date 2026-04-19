@@ -1,4 +1,8 @@
-MIT License
+# NBS-Bridge Repository — Licensing
+
+This repository is released under a dual licence, depending on file type.
+
+## Code: MIT License
 
 Copyright (c) 2026 Daniel Ziekenoppasser-Powell
 
@@ -19,3 +23,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Applies to: `*.py`, `*.ipynb`, `*.sh`.
+
+## Documentation and figures: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose, including commercially
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit (cite Ziekenoppasser-Powell 2026
+  and this repository), provide a link to the licence, and indicate if changes were made.
+  You may do so in any reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Applies to: `*.md`, `paper-figures/*.png`, `paper-figures/*.pdf`.

@@ -1,0 +1,18 @@
+{
+  "n_pairs": 1280,
+  "dist_before": {
+    "zero-dense": 1481,
+    "nine-heavy": 2129,
+    "five-heavy": 1482,
+    "one-heavy": 968
+  },
+  "dist_after": {
+    "zero-dense": 320,
+    "nine-heavy": 320,
+    "five-heavy": 320,
+    "one-heavy": 320
+  },
+  "skipped": [],
+  "roundtrip_rate": 1.0,
+  "target_per_cat": 320
+}

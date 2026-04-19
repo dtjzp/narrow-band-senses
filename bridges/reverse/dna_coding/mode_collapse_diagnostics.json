@@ -1,0 +1,37 @@
+{
+  "per_category": {
+    "high-GC": {
+      "n": 32,
+      "unique_rate": 0.46875,
+      "intra_cat_distance": 13.27,
+      "cat_match": 1.0
+    },
+    "with-ORF": {
+      "n": 32,
+      "unique_rate": 0.75,
+      "intra_cat_distance": 39.76,
+      "cat_match": 0.40625
+    },
+    "mid-GC": {
+      "n": 32,
+      "unique_rate": 0.5625,
+      "intra_cat_distance": 31.475,
+      "cat_match": 0.0
+    },
+    "low-GC": {
+      "n": 32,
+      "unique_rate": 0.40625,
+      "intra_cat_distance": 21.075,
+      "cat_match": 0.09375
+    }
+  },
+  "cross_category_leakage_to_dominant": 0.4296875,
+  "dominant_classification": "high-GC",
+  "intra_dist_threshold": 30,
+  "verdict": "FAIL",
+  "failure_reasons": {
+    "unique_rate_fail": false,
+    "intra_cat_distance_fail": true,
+    "high_leak_fail": false
+  }
+}

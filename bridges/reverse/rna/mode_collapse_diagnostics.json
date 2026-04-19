@@ -1,0 +1,37 @@
+{
+  "per_category": {
+    "nested-helical": {
+      "n": 32,
+      "unique_rate": 0.1875,
+      "intra_cat_distance": 126.845,
+      "cat_match": 0.5
+    },
+    "bulge-rich": {
+      "n": 32,
+      "unique_rate": 0.25,
+      "intra_cat_distance": 37.49,
+      "cat_match": 1.0
+    },
+    "multiloop": {
+      "n": 32,
+      "unique_rate": 0.25,
+      "intra_cat_distance": 71.715,
+      "cat_match": 0.125
+    },
+    "simple-hairpin": {
+      "n": 32,
+      "unique_rate": 0.03125,
+      "intra_cat_distance": 0.0,
+      "cat_match": 1.0
+    }
+  },
+  "cross_category_leakage_to_dominant": 0.59375,
+  "dominant_classification": "simple-hairpin",
+  "intra_dist_threshold": 5,
+  "verdict": "FAIL",
+  "failure_reasons": {
+    "unique_rate_fail": true,
+    "intra_cat_distance_fail": true,
+    "high_leak_fail": false
+  }
+}

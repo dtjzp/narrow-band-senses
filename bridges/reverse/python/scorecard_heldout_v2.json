@@ -1,0 +1,78 @@
+{
+  "overall": {
+    "n": 160,
+    "strict_parse_rate": 0.00625,
+    "feature_match_mean": 0.43447916666666664,
+    "per_feature_mean": {
+      "has_loop": 0.8046875,
+      "has_conditional": 0.6979166666666666,
+      "calls_builtins": 0.65625,
+      "returns_value": 0.0,
+      "has_try_except": 0.9895833333333334,
+      "complex_structure": 0.0625,
+      "uses_arithmetic": 0.03125,
+      "uses_comparison": 0.21875
+    }
+  },
+  "per_category": {
+    "collection": {
+      "n": 32,
+      "strict_parse_rate": 0.0,
+      "feature_match_mean": 0.6640625,
+      "per_feature_mean": {
+        "has_loop": 1.0,
+        "has_conditional": 1.0,
+        "calls_builtins": 0.65625,
+        "returns_value": 0.0
+      },
+      "unique_rate": 0.96875
+    },
+    "loop": {
+      "n": 32,
+      "strict_parse_rate": 0.0,
+      "feature_match_mean": 0.42708333333333337,
+      "per_feature_mean": {
+        "has_loop": 0.28125,
+        "has_try_except": 1.0,
+        "returns_value": 0.0
+      },
+      "unique_rate": 1.0
+    },
+    "complex": {
+      "n": 32,
+      "strict_parse_rate": 0.03125,
+      "feature_match_mean": 0.03125,
+      "per_feature_mean": {
+        "complex_structure": 0.0625,
+        "returns_value": 0.0
+      },
+      "unique_rate": 1.0
+    },
+    "arithmetic": {
+      "n": 32,
+      "strict_parse_rate": 0.0,
+      "feature_match_mean": 0.6000000000000001,
+      "per_feature_mean": {
+        "has_loop": 1.0,
+        "has_conditional": 1.0,
+        "has_try_except": 0.96875,
+        "uses_arithmetic": 0.03125,
+        "returns_value": 0.0
+      },
+      "unique_rate": 0.90625
+    },
+    "conditional": {
+      "n": 32,
+      "strict_parse_rate": 0.0,
+      "feature_match_mean": 0.4500000000000001,
+      "per_feature_mean": {
+        "has_loop": 0.9375,
+        "has_conditional": 0.09375,
+        "has_try_except": 1.0,
+        "uses_comparison": 0.21875,
+        "returns_value": 0.0
+      },
+      "unique_rate": 1.0
+    }
+  }
+}

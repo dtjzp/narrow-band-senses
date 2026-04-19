@@ -1,0 +1,160 @@
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 0.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.8, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 0.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.2, "per_feature": {"has_loop": 0.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": true, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "ast"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.8, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "conditional", "strict_parse": false, "feature_match": 0.4, "per_feature": {"has_loop": 1.0, "has_conditional": 0.0, "has_try_except": 1.0, "uses_comparison": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.5, "per_feature": {"complex_structure": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.6666666666666666, "per_feature": {"has_loop": 1.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.5, "per_feature": {"complex_structure": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.75, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "arithmetic", "strict_parse": false, "feature_match": 0.6, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "has_try_except": 1.0, "uses_arithmetic": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "collection", "strict_parse": false, "feature_match": 0.5, "per_feature": {"has_loop": 1.0, "has_conditional": 1.0, "calls_builtins": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "loop", "strict_parse": false, "feature_match": 0.3333333333333333, "per_feature": {"has_loop": 0.0, "has_try_except": 1.0, "returns_value": 0.0}, "source": "regex"}
+{"category": "complex", "strict_parse": false, "feature_match": 0.0, "per_feature": {"complex_structure": 0.0, "returns_value": 0.0}, "source": "regex"}

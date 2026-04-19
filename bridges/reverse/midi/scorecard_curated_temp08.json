@@ -1,0 +1,59 @@
+{
+  "n_prompts": 25,
+  "rates": {
+    "parse_success": 1.0,
+    "category_match": 0.2,
+    "pitch_range_match": 0.32,
+    "entropy_match": 0.2,
+    "unique_pitches_match": 0.2,
+    "max_asc_run_match": 0.5,
+    "max_desc_run_match": 0.5,
+    "leap_ratio_match": 0.8
+  },
+  "by_category": {
+    "tonal": {
+      "parse_success": 1.0,
+      "category_match": 0.8,
+      "pitch_range_match": 0.0,
+      "entropy_match": 0.4,
+      "unique_pitches_match": 0.2
+    },
+    "ascending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.4,
+      "max_asc_run_match": 0.0,
+      "max_desc_run_match": 1.0,
+      "entropy_match": 0.2
+    },
+    "descending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.4,
+      "max_asc_run_match": 1.0,
+      "max_desc_run_match": 0.0,
+      "entropy_match": 0.4
+    },
+    "leap-dominant": {
+      "parse_success": 1.0,
+      "category_match": 0.2,
+      "pitch_range_match": 0.0,
+      "entropy_match": 0.0,
+      "leap_ratio_match": 0.8
+    },
+    "mixed": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.8,
+      "entropy_match": 0.0
+    }
+  },
+  "by_category_n": {
+    "tonal": 5,
+    "ascending-run": 5,
+    "descending-run": 5,
+    "leap-dominant": 5,
+    "mixed": 5
+  },
+  "overall_fidelity": 0.45333333333333337
+}

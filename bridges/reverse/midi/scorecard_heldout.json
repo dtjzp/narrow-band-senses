@@ -1,0 +1,91 @@
+{
+  "n_prompts": 320,
+  "rates": {
+    "parse_success": 1.0,
+    "category_match": 0.20625,
+    "pitch_range_match": 0.01875,
+    "max_asc_run_match": 0.459375,
+    "max_desc_run_match": 0.496875,
+    "entropy_match": 0.003125,
+    "unique_pitches_match": 0.0125,
+    "leap_ratio_match": 0.05625,
+    "asc_share_match": 0.6375,
+    "desc_share_match": 0.6375,
+    "interval_dist_match": 0.00625
+  },
+  "by_category": {
+    "descending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.0,
+      "max_asc_run_match": 0.3333333333333333,
+      "max_desc_run_match": 0.0,
+      "entropy_match": 0.0,
+      "unique_pitches_match": 0.0,
+      "leap_ratio_match": 0.16666666666666666,
+      "asc_share_match": 0.625,
+      "desc_share_match": 0.625,
+      "interval_dist_match": 0.020833333333333332
+    },
+    "leap-dominant": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.0,
+      "max_asc_run_match": 0.8103448275862069,
+      "max_desc_run_match": 0.8620689655172413,
+      "entropy_match": 0.0,
+      "unique_pitches_match": 0.0,
+      "leap_ratio_match": 0.05172413793103448,
+      "asc_share_match": 0.8275862068965517,
+      "desc_share_match": 0.8275862068965517,
+      "interval_dist_match": 0.0
+    },
+    "mixed": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.0,
+      "max_asc_run_match": 0.5070422535211268,
+      "max_desc_run_match": 0.4647887323943662,
+      "entropy_match": 0.0,
+      "unique_pitches_match": 0.0,
+      "leap_ratio_match": 0.0,
+      "asc_share_match": 0.5492957746478874,
+      "desc_share_match": 0.5492957746478874,
+      "interval_dist_match": 0.0
+    },
+    "tonal": {
+      "parse_success": 1.0,
+      "category_match": 1.0,
+      "pitch_range_match": 0.09090909090909091,
+      "max_asc_run_match": 0.7272727272727273,
+      "max_desc_run_match": 0.7424242424242424,
+      "entropy_match": 0.015151515151515152,
+      "unique_pitches_match": 0.06060606060606061,
+      "leap_ratio_match": 0.06060606060606061,
+      "asc_share_match": 0.48484848484848486,
+      "desc_share_match": 0.48484848484848486,
+      "interval_dist_match": 0.015151515151515152
+    },
+    "ascending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.0,
+      "max_asc_run_match": 0.0,
+      "max_desc_run_match": 0.35064935064935066,
+      "entropy_match": 0.0,
+      "unique_pitches_match": 0.0,
+      "leap_ratio_match": 0.03896103896103896,
+      "asc_share_match": 0.7142857142857143,
+      "desc_share_match": 0.7142857142857143,
+      "interval_dist_match": 0.0
+    }
+  },
+  "by_category_n": {
+    "descending-run": 48,
+    "leap-dominant": 58,
+    "mixed": 71,
+    "tonal": 66,
+    "ascending-run": 77
+  },
+  "overall_fidelity": 0.3640625
+}

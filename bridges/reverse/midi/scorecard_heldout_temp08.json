@@ -1,0 +1,91 @@
+{
+  "n_prompts": 320,
+  "rates": {
+    "parse_success": 1.0,
+    "category_match": 0.3,
+    "pitch_range_match": 0.496875,
+    "max_asc_run_match": 0.7125,
+    "max_desc_run_match": 0.75625,
+    "entropy_match": 0.353125,
+    "unique_pitches_match": 0.453125,
+    "leap_ratio_match": 0.521875,
+    "asc_share_match": 0.865625,
+    "desc_share_match": 0.865625,
+    "interval_dist_match": 0.321875
+  },
+  "by_category": {
+    "descending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.0,
+      "pitch_range_match": 0.4583333333333333,
+      "max_asc_run_match": 0.7083333333333334,
+      "max_desc_run_match": 0.0625,
+      "entropy_match": 0.375,
+      "unique_pitches_match": 0.4375,
+      "leap_ratio_match": 0.6041666666666666,
+      "asc_share_match": 0.75,
+      "desc_share_match": 0.75,
+      "interval_dist_match": 0.22916666666666666
+    },
+    "leap-dominant": {
+      "parse_success": 1.0,
+      "category_match": 0.15517241379310345,
+      "pitch_range_match": 0.5172413793103449,
+      "max_asc_run_match": 1.0,
+      "max_desc_run_match": 0.9827586206896551,
+      "entropy_match": 0.1896551724137931,
+      "unique_pitches_match": 0.41379310344827586,
+      "leap_ratio_match": 0.4482758620689655,
+      "asc_share_match": 0.896551724137931,
+      "desc_share_match": 0.896551724137931,
+      "interval_dist_match": 0.41379310344827586
+    },
+    "mixed": {
+      "parse_success": 1.0,
+      "category_match": 0.4084507042253521,
+      "pitch_range_match": 0.5211267605633803,
+      "max_asc_run_match": 0.9436619718309859,
+      "max_desc_run_match": 0.9295774647887324,
+      "entropy_match": 0.36619718309859156,
+      "unique_pitches_match": 0.36619718309859156,
+      "leap_ratio_match": 0.5070422535211268,
+      "asc_share_match": 0.9014084507042254,
+      "desc_share_match": 0.9014084507042254,
+      "interval_dist_match": 0.2676056338028169
+    },
+    "tonal": {
+      "parse_success": 1.0,
+      "category_match": 0.8636363636363636,
+      "pitch_range_match": 0.5606060606060606,
+      "max_asc_run_match": 0.9545454545454546,
+      "max_desc_run_match": 0.9393939393939394,
+      "entropy_match": 0.48484848484848486,
+      "unique_pitches_match": 0.5757575757575758,
+      "leap_ratio_match": 0.5,
+      "asc_share_match": 0.8787878787878788,
+      "desc_share_match": 0.8787878787878788,
+      "interval_dist_match": 0.3181818181818182
+    },
+    "ascending-run": {
+      "parse_success": 1.0,
+      "category_match": 0.012987012987012988,
+      "pitch_range_match": 0.42857142857142855,
+      "max_asc_run_match": 0.07792207792207792,
+      "max_desc_run_match": 0.7012987012987013,
+      "entropy_match": 0.33766233766233766,
+      "unique_pitches_match": 0.4675324675324675,
+      "leap_ratio_match": 0.5584415584415584,
+      "asc_share_match": 0.8701298701298701,
+      "desc_share_match": 0.8701298701298701,
+      "interval_dist_match": 0.36363636363636365
+    }
+  },
+  "by_category_n": {
+    "descending-run": 48,
+    "leap-dominant": 58,
+    "mixed": 71,
+    "tonal": 66,
+    "ascending-run": 77
+  },
+  "overall_fidelity": 0.603125
+}

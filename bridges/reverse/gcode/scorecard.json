@@ -1,0 +1,1580 @@
+{
+  "bridge_only": {
+    "label": "bridge_only",
+    "n_prompts": 24,
+    "parse_success_rate": 1.0,
+    "command_count_match_rate": 0.625,
+    "x_range_match_rate": 0.5,
+    "y_range_match_rate": 0.3333333333333333,
+    "monotonicity_match_rate": 0.5789473684210527,
+    "trajectory_match_rate": 0.5416666666666666,
+    "overall_fidelity": 0.5,
+    "per_category": {
+      "extrusion": {
+        "n": 6,
+        "parse": 6,
+        "traj": 1,
+        "cmd": 5
+      },
+      "travel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 4,
+        "cmd": 2
+      },
+      "mixed": {
+        "n": 5,
+        "parse": 5,
+        "traj": 1,
+        "cmd": 1
+      },
+      "retraction": {
+        "n": 5,
+        "parse": 5,
+        "traj": 5,
+        "cmd": 5
+      },
+      "accel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 2,
+        "cmd": 2
+      }
+    }
+  },
+  "hybrid": {
+    "label": "hybrid",
+    "n_prompts": 24,
+    "parse_success_rate": 1.0,
+    "command_count_match_rate": 1.0,
+    "x_range_match_rate": 1.0,
+    "y_range_match_rate": 1.0,
+    "monotonicity_match_rate": 1.0,
+    "trajectory_match_rate": 1.0,
+    "overall_fidelity": 1.0,
+    "per_category": {
+      "extrusion": {
+        "n": 6,
+        "parse": 6,
+        "traj": 6,
+        "cmd": 6
+      },
+      "travel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 4,
+        "cmd": 4
+      },
+      "mixed": {
+        "n": 5,
+        "parse": 5,
+        "traj": 5,
+        "cmd": 5
+      },
+      "retraction": {
+        "n": 5,
+        "parse": 5,
+        "traj": 5,
+        "cmd": 5
+      },
+      "accel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 4,
+        "cmd": 4
+      }
+    }
+  },
+  "ordering_alignment": {},
+  "per_prompt": {
+    "bridge_only": [
+      {
+        "prompt_id": 1,
+        "category": "extrusion",
+        "intended_shape": "short horizontal line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": true,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 2
+        }
+      },
+      {
+        "prompt_id": 2,
+        "category": "extrusion",
+        "intended_shape": "long vertical line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 3,
+        "category": "extrusion",
+        "intended_shape": "short diagonal extrude",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 4,
+        "category": "extrusion",
+        "intended_shape": "tiny perimeter bead",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 2
+        }
+      },
+      {
+        "prompt_id": 5,
+        "category": "extrusion",
+        "intended_shape": "sweeping curve",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 6,
+        "category": "travel",
+        "intended_shape": "long X travel",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": false,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 11,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 7,
+        "category": "travel",
+        "intended_shape": "diagonal travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 12,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 8,
+        "category": "travel",
+        "intended_shape": "short travel hop",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 11,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 9,
+        "category": "travel",
+        "intended_shape": "vertical travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 11,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 10,
+        "category": "mixed",
+        "intended_shape": "print-then-travel",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "travel",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 12,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 11,
+        "category": "mixed",
+        "intended_shape": "alternating short segments",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 12,
+        "category": "mixed",
+        "intended_shape": "mixed with long travel",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 10,
+          "G1": 1,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 13,
+        "category": "mixed",
+        "intended_shape": "mixed zigzag",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 14,
+        "category": "mixed",
+        "intended_shape": "small patch",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "travel",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 12,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 15,
+        "category": "retraction",
+        "intended_shape": "short retraction event",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 16,
+        "category": "retraction",
+        "intended_shape": "double retraction",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 17,
+        "category": "retraction",
+        "intended_shape": "wide retraction pattern",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 2
+        }
+      },
+      {
+        "prompt_id": 18,
+        "category": "retraction",
+        "intended_shape": "small retraction near origin",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 19,
+        "category": "retraction",
+        "intended_shape": "retraction along Y",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 3
+        }
+      },
+      {
+        "prompt_id": 20,
+        "category": "accel",
+        "intended_shape": "config change with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 21,
+        "category": "accel",
+        "intended_shape": "accel-only config",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 11,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 22,
+        "category": "accel",
+        "intended_shape": "jerk set with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": false,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 23,
+        "category": "accel",
+        "intended_shape": "accel change in mid-print",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": false,
+        "y_range_match": false,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 10,
+          "G1": 1,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 24,
+        "category": "extrusion",
+        "intended_shape": "very short fine extrude",
+        "parse_success": true,
+        "cmd_overall": false,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": false,
+        "dominant_kind": "retraction",
+        "trajectory_match": false,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      }
+    ],
+    "hybrid": [
+      {
+        "prompt_id": 1,
+        "category": "extrusion",
+        "intended_shape": "short horizontal line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 2,
+        "category": "extrusion",
+        "intended_shape": "long vertical line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 10,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 3,
+        "category": "extrusion",
+        "intended_shape": "short diagonal extrude",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 4,
+        "category": "extrusion",
+        "intended_shape": "tiny perimeter bead",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 5,
+        "category": "extrusion",
+        "intended_shape": "sweeping curve",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 9,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 6,
+        "category": "travel",
+        "intended_shape": "long X travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 8,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 7,
+        "category": "travel",
+        "intended_shape": "diagonal travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 10,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 8,
+        "category": "travel",
+        "intended_shape": "short travel hop",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 6,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 9,
+        "category": "travel",
+        "intended_shape": "vertical travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 9,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 10,
+        "category": "mixed",
+        "intended_shape": "print-then-travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 4,
+          "G1": 4,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 11,
+        "category": "mixed",
+        "intended_shape": "alternating short segments",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 3,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 12,
+        "category": "mixed",
+        "intended_shape": "mixed with long travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 5,
+          "G1": 3,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 13,
+        "category": "mixed",
+        "intended_shape": "mixed zigzag",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 2,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 14,
+        "category": "mixed",
+        "intended_shape": "small patch",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 4,
+          "G1": 4,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 15,
+        "category": "retraction",
+        "intended_shape": "short retraction event",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 16,
+        "category": "retraction",
+        "intended_shape": "double retraction",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 2
+        }
+      },
+      {
+        "prompt_id": 17,
+        "category": "retraction",
+        "intended_shape": "wide retraction pattern",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 18,
+        "category": "retraction",
+        "intended_shape": "small retraction near origin",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 19,
+        "category": "retraction",
+        "intended_shape": "retraction along Y",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 20,
+        "category": "accel",
+        "intended_shape": "config change with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 21,
+        "category": "accel",
+        "intended_shape": "accel-only config",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 6,
+          "G1": 2,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 22,
+        "category": "accel",
+        "intended_shape": "jerk set with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 23,
+        "category": "accel",
+        "intended_shape": "accel change in mid-print",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 2,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 24,
+        "category": "extrusion",
+        "intended_shape": "very short fine extrude",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      }
+    ],
+    "claim_only": [
+      {
+        "prompt_id": 1,
+        "category": "extrusion",
+        "intended_shape": "short horizontal line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 2,
+        "category": "extrusion",
+        "intended_shape": "long vertical line",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 10,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 3,
+        "category": "extrusion",
+        "intended_shape": "short diagonal extrude",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 4,
+        "category": "extrusion",
+        "intended_shape": "tiny perimeter bead",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 5,
+        "category": "extrusion",
+        "intended_shape": "sweeping curve",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 9,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 6,
+        "category": "travel",
+        "intended_shape": "long X travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 8,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 7,
+        "category": "travel",
+        "intended_shape": "diagonal travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 10,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 8,
+        "category": "travel",
+        "intended_shape": "short travel hop",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 6,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 9,
+        "category": "travel",
+        "intended_shape": "vertical travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "travel",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 9,
+          "G1": 0,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 10,
+        "category": "mixed",
+        "intended_shape": "print-then-travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 4,
+          "G1": 4,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 11,
+        "category": "mixed",
+        "intended_shape": "alternating short segments",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 3,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 12,
+        "category": "mixed",
+        "intended_shape": "mixed with long travel",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 5,
+          "G1": 3,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 13,
+        "category": "mixed",
+        "intended_shape": "mixed zigzag",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 2,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 14,
+        "category": "mixed",
+        "intended_shape": "small patch",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "mixed",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 4,
+          "G1": 4,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 15,
+        "category": "retraction",
+        "intended_shape": "short retraction event",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 16,
+        "category": "retraction",
+        "intended_shape": "double retraction",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 2
+        }
+      },
+      {
+        "prompt_id": 17,
+        "category": "retraction",
+        "intended_shape": "wide retraction pattern",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 6,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 18,
+        "category": "retraction",
+        "intended_shape": "small retraction near origin",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 19,
+        "category": "retraction",
+        "intended_shape": "retraction along Y",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "retraction",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 1
+        }
+      },
+      {
+        "prompt_id": 20,
+        "category": "accel",
+        "intended_shape": "config change with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 7,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 21,
+        "category": "accel",
+        "intended_shape": "accel-only config",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": null,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 6,
+          "G1": 2,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 22,
+        "category": "accel",
+        "intended_shape": "jerk set with extrusion",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 8,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 1,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 23,
+        "category": "accel",
+        "intended_shape": "accel change in mid-print",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "accel_ext",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 2,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 1,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      },
+      {
+        "prompt_id": 24,
+        "category": "extrusion",
+        "intended_shape": "very short fine extrude",
+        "parse_success": true,
+        "cmd_overall": true,
+        "x_range_match": true,
+        "y_range_match": true,
+        "monotonicity_match": true,
+        "dominant_kind": "extrusion",
+        "trajectory_match": true,
+        "counts": {
+          "G0": 0,
+          "G1": 5,
+          "G2G3": 0,
+          "M204": 0,
+          "M205": 0,
+          "n_retractions": 0
+        }
+      }
+    ]
+  },
+  "claim_only": {
+    "label": "claim_only",
+    "n_prompts": 24,
+    "parse_success_rate": 1.0,
+    "command_count_match_rate": 1.0,
+    "x_range_match_rate": 1.0,
+    "y_range_match_rate": 1.0,
+    "monotonicity_match_rate": 1.0,
+    "trajectory_match_rate": 1.0,
+    "overall_fidelity": 1.0,
+    "per_category": {
+      "extrusion": {
+        "n": 6,
+        "parse": 6,
+        "traj": 6,
+        "cmd": 6
+      },
+      "travel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 4,
+        "cmd": 4
+      },
+      "mixed": {
+        "n": 5,
+        "parse": 5,
+        "traj": 5,
+        "cmd": 5
+      },
+      "retraction": {
+        "n": 5,
+        "parse": 5,
+        "traj": 5,
+        "cmd": 5
+      },
+      "accel": {
+        "n": 4,
+        "parse": 4,
+        "traj": 4,
+        "cmd": 4
+      }
+    }
+  }
+}

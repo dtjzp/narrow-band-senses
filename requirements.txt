@@ -1,0 +1,23 @@
+# Core scientific stack (30-minute reproduce path)
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+
+# Entropy computation (optional — NSB estimator; scripts fall back to
+# Miller-Madow if ndd unavailable)
+# ndd>=1.10
+
+# Transformer training + bridges (for factor-b/c/d + bridges/* reproduce)
+torch>=2.0
+transformers>=4.35
+tqdm>=4.65
+
+# Tokenisation + data handling
+tokenizers>=0.14
+
+# For SMILES + reactions PoC validation (optional)
+# rdkit>=2023.9
+
+# For MIDI PoC parsing (optional)
+# mido>=1.3

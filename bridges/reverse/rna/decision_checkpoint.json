@@ -1,0 +1,17 @@
+{
+  "window_size_chosen": 200,
+  "sample_size": 2000,
+  "distribution": {
+    "nested-helical": 0.596,
+    "bulge-rich": 0.214,
+    "simple-hairpin": 0.108,
+    "multiloop": 0.082
+  },
+  "categories_defined": [
+    "simple-hairpin",
+    "multiloop",
+    "nested-helical",
+    "bulge-rich"
+  ],
+  "skipped_categories_below_5pct": []
+}

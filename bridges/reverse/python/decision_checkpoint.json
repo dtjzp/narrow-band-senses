@@ -1,0 +1,13 @@
+{
+  "window_size_chosen": 400,
+  "distribution": {
+    "conditional": 0.058,
+    "arithmetic": 0.628,
+    "complex": 0.114,
+    "loop": 0.134,
+    "collection": 0.066
+  },
+  "dominant_frac": 0.628,
+  "skipped_categories": [],
+  "fallback_applied": "window_size_retried_picked_400"
+}

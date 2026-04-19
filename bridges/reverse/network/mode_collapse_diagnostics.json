@@ -1,0 +1,36 @@
+{
+  "per_category": {
+    "five-heavy": {
+      "n": 32,
+      "unique_rate": 0.34375,
+      "intra_cat_distance": 10.005,
+      "cat_match": 0.0
+    },
+    "one-heavy": {
+      "n": 32,
+      "unique_rate": 0.21875,
+      "intra_cat_distance": 12.845,
+      "cat_match": 0.0
+    },
+    "nine-heavy": {
+      "n": 32,
+      "unique_rate": 0.21875,
+      "intra_cat_distance": 6.735,
+      "cat_match": 1.0
+    },
+    "zero-dense": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "intra_cat_distance": 0.94,
+      "cat_match": 1.0
+    }
+  },
+  "cross_category_leakage_to_dominant": 0.6015625,
+  "dominant_classification": "nine-heavy",
+  "verdict": "FAIL",
+  "failure_reasons": {
+    "unique_rate_fail": true,
+    "intra_cat_distance_fail": true,
+    "high_leak_fail": false
+  }
+}

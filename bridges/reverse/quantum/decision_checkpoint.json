@@ -1,0 +1,15 @@
+{
+  "window_size_chosen": 200,
+  "distribution": {
+    "single-qubit": 0.122,
+    "measurement-heavy": 0.234,
+    "entangling": 0.028,
+    "highly-entangled": 0.482,
+    "parameterised": 0.134
+  },
+  "dominant_frac": 0.482,
+  "skipped_categories": [
+    "entangling"
+  ],
+  "fallback_applied": null
+}

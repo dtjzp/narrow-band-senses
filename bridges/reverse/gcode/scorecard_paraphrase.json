@@ -1,0 +1,312 @@
+{
+  "bridge-only": {
+    "scorecard": {
+      "label": "bridge-only",
+      "n_prompts": 45,
+      "parse_success_rate": 1.0,
+      "command_count_match_rate": 0.6888888888888889,
+      "x_range_match_rate": 0.5555555555555556,
+      "y_range_match_rate": 0.7333333333333333,
+      "monotonicity_match_rate": 0.375,
+      "trajectory_match_rate": 0.4,
+      "overall_fidelity": 0.5944444444444444,
+      "per_category": {
+        "extrusion": {
+          "n": 10,
+          "parse": 10,
+          "traj": 1,
+          "cmd": 10
+        },
+        "travel": {
+          "n": 5,
+          "parse": 5,
+          "traj": 4,
+          "cmd": 4
+        },
+        "mixed": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 4
+        },
+        "retraction": {
+          "n": 10,
+          "parse": 10,
+          "traj": 7,
+          "cmd": 8
+        },
+        "accel": {
+          "n": 10,
+          "parse": 10,
+          "traj": 6,
+          "cmd": 5
+        }
+      }
+    },
+    "source_fidelity": {
+      "xy_shape_similarity": {
+        "mean": 19.819631384816113,
+        "median": 1.037192458791736,
+        "n": 45
+      },
+      "cmd_edit_distance": {
+        "mean": 0.24174122174122173,
+        "median": 0.125,
+        "n": 45
+      },
+      "e_flow_rms": {
+        "mean": 326.51575593893506,
+        "median": 36.50790287152985,
+        "n": 37
+      }
+    }
+  },
+  "claim-only-regex": {
+    "scorecard": {
+      "label": "claim-only-regex",
+      "n_prompts": 45,
+      "parse_success_rate": 1.0,
+      "command_count_match_rate": 0.5777777777777777,
+      "x_range_match_rate": 0.6,
+      "y_range_match_rate": 0.8,
+      "monotonicity_match_rate": 0.75,
+      "trajectory_match_rate": 0.2222222222222222,
+      "overall_fidelity": 0.55,
+      "per_category": {
+        "extrusion": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "travel": {
+          "n": 5,
+          "parse": 5,
+          "traj": 0,
+          "cmd": 0
+        },
+        "mixed": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 4
+        },
+        "retraction": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 8
+        },
+        "accel": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 4
+        }
+      }
+    },
+    "source_fidelity": {
+      "xy_shape_similarity": {
+        "mean": 1.5327969570965252,
+        "median": 1.1027203756993322,
+        "n": 45
+      },
+      "cmd_edit_distance": {
+        "mean": 0.38742504409171075,
+        "median": 0.25,
+        "n": 45
+      },
+      "e_flow_rms": {
+        "mean": 222.93846812874878,
+        "median": 21.228383185907965,
+        "n": 38
+      }
+    }
+  },
+  "claim-only-LLM": {
+    "scorecard": {
+      "label": "claim-only-LLM",
+      "n_prompts": 45,
+      "parse_success_rate": 1.0,
+      "command_count_match_rate": 1.0,
+      "x_range_match_rate": 1.0,
+      "y_range_match_rate": 1.0,
+      "monotonicity_match_rate": 1.0,
+      "trajectory_match_rate": 1.0,
+      "overall_fidelity": 1.0,
+      "per_category": {
+        "extrusion": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "travel": {
+          "n": 5,
+          "parse": 5,
+          "traj": 5,
+          "cmd": 5
+        },
+        "mixed": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "retraction": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "accel": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        }
+      }
+    },
+    "source_fidelity": {
+      "xy_shape_similarity": {
+        "mean": 15.771547458191094,
+        "median": 1.964346778286594,
+        "n": 45
+      },
+      "cmd_edit_distance": {
+        "mean": 0.1997883597883598,
+        "median": 0.0,
+        "n": 45
+      },
+      "e_flow_rms": {
+        "mean": 0.44242943451938727,
+        "median": 0.3684165494700291,
+        "n": 38
+      }
+    }
+  },
+  "hybrid-regex": {
+    "scorecard": {
+      "label": "hybrid-regex",
+      "n_prompts": 45,
+      "parse_success_rate": 1.0,
+      "command_count_match_rate": 0.6666666666666666,
+      "x_range_match_rate": 0.6,
+      "y_range_match_rate": 0.8,
+      "monotonicity_match_rate": 0.75,
+      "trajectory_match_rate": 0.3111111111111111,
+      "overall_fidelity": 0.5944444444444444,
+      "per_category": {
+        "extrusion": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "travel": {
+          "n": 5,
+          "parse": 5,
+          "traj": 4,
+          "cmd": 4
+        },
+        "mixed": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 4
+        },
+        "retraction": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 8
+        },
+        "accel": {
+          "n": 10,
+          "parse": 10,
+          "traj": 0,
+          "cmd": 4
+        }
+      }
+    },
+    "source_fidelity": {
+      "xy_shape_similarity": {
+        "mean": 1.5327969570965252,
+        "median": 1.1027203756993322,
+        "n": 45
+      },
+      "cmd_edit_distance": {
+        "mean": 0.24174122174122173,
+        "median": 0.125,
+        "n": 45
+      },
+      "e_flow_rms": {
+        "mean": 226.93412196556253,
+        "median": 19.876426709287017,
+        "n": 37
+      }
+    }
+  },
+  "hybrid-LLM": {
+    "scorecard": {
+      "label": "hybrid-LLM",
+      "n_prompts": 45,
+      "parse_success_rate": 1.0,
+      "command_count_match_rate": 1.0,
+      "x_range_match_rate": 1.0,
+      "y_range_match_rate": 1.0,
+      "monotonicity_match_rate": 1.0,
+      "trajectory_match_rate": 1.0,
+      "overall_fidelity": 1.0,
+      "per_category": {
+        "extrusion": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "travel": {
+          "n": 5,
+          "parse": 5,
+          "traj": 5,
+          "cmd": 5
+        },
+        "mixed": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "retraction": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        },
+        "accel": {
+          "n": 10,
+          "parse": 10,
+          "traj": 10,
+          "cmd": 10
+        }
+      }
+    },
+    "source_fidelity": {
+      "xy_shape_similarity": {
+        "mean": 15.771547458191094,
+        "median": 1.964346778286594,
+        "n": 45
+      },
+      "cmd_edit_distance": {
+        "mean": 0.1934391534391534,
+        "median": 0.0,
+        "n": 45
+      },
+      "e_flow_rms": {
+        "mean": 0.44242943451938727,
+        "median": 0.3684165494700291,
+        "n": 38
+      }
+    }
+  }
+}
