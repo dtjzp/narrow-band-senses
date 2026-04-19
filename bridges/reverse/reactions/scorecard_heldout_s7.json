@@ -1,0 +1,42 @@
+{
+  "domain": "reactions",
+  "seed": 7,
+  "total_rates": {
+    "cat_match": 0.0,
+    "parse_ok": 0.0
+  },
+  "per_category": {
+    "elimination": {
+      "n": 32,
+      "unique_rate": 0.09375,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 167.08,
+      "max_leakage": 0.0
+    },
+    "rearrangement": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 44.24,
+      "max_leakage": 0.0
+    },
+    "substitution": {
+      "n": 32,
+      "unique_rate": 0.03125,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 0.0,
+      "max_leakage": 0.0
+    },
+    "addition": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 135.66,
+      "max_leakage": 0.0
+    }
+  }
+}

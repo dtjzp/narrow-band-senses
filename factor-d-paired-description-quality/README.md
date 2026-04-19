@@ -68,7 +68,7 @@ See `labeller_template.md` for the interface.
 
 ## Open questions
 
-- Does the Factor D dominance claim extend beyond 8 domains? Tested on G-code (confirmed) and MIDI (corroborating negative via XL failure). Untested elsewhere.
+- Does the Factor D dominance claim extend beyond 10 domains? Tested on G-code (confirmed) and MIDI (corroborating negative via XL failure). Untested elsewhere.
 - Is there an even-better pair design above "balanced semantic"? Candidates: adversarially-hard semantic (where descriptions are intentionally close across categories), compositional semantic (describe sub-windows separately), multi-granularity semantic. All future work.
 
 ## References in the paper

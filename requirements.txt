@@ -16,8 +16,12 @@ tqdm>=4.65
 # Tokenisation + data handling
 tokenizers>=0.14
 
-# For SMILES + reactions PoC validation (optional)
-# rdkit>=2023.9
+# Full factor-a recompute path (--recompute-ss) per-domain scripts require:
+h5py>=3.9           # das_entropy.py
+qiskit>=0.45        # quantum_entropy.py
+requests>=2.31      # traffic_entropy.py
+librosa>=0.10       # whale_entropy.py
+mido>=1.3           # midi_entropy.py (imported unguarded at module top)
 
-# For MIDI PoC parsing (optional)
-# mido>=1.3
+# For SMILES + reactions PoC validation (optional; labellers on Drive)
+# rdkit>=2023.9

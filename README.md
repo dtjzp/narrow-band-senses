@@ -23,7 +23,7 @@ An information-theoretic framework that predicts *before training* which data mo
 
 Plus **variance-bound** (RNA): multi-run non-reproducibility within a single configuration; flagged as a distinct failure mode motivating the multi-seed reporting rule.
 
-## 30-minute reproduce — headline result
+## Reproduce — headline result
 
 ```bash
 git clone https://github.com/dtjzp/narrow-band-senses.git
@@ -33,7 +33,19 @@ python factor-a-domain-structure/reproduce_rho.py
 # → prints Spearman ρ over 29 domains; regenerates paper-figures/fig_main_ss_correlation.png
 ```
 
-CPU-only. ~25 min wall-clock on a modern laptop. No Drive / Colab dependency.
+The script requires two pre-computed inputs:
+
+- **`factor-a-domain-structure/results/canonical_training_entropy.json`** (29 domains, H₀/H₃/SS) — **shipped in this repo**.
+- **`factor-a-domain-structure/results/bpc_per_domain.json`** (29 domains, bits-per-character from ~50M-param character transformers) — **pending Zenodo deposit**. Each BPC value requires ~1 hour of training on A100 per domain; the full table is ~30 A100-hours. Until the Zenodo DOI is live, contact the corresponding author for the JSON.
+
+When both JSONs are present, the reproduce path is CPU-only and runs in ~30 seconds (not a training run — it's a Spearman correlation over the two shipped JSONs). The `--recompute-ss` mode recomputes SS from raw text streams and takes ~25 min CPU, but also requires the raw streams (on Drive / pending Zenodo).
+
+H_win/H₀ metric (secondary predictor, three-branch typology) is shipped in full:
+
+```bash
+python bridges/reverse/compute_window_entropy.py --check-only
+# → prints the 11-domain H_win/H₀ table from bridges/reverse/window_entropy_results.json
+```
 
 ## Navigation
 

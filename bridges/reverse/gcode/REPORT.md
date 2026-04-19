@@ -47,4 +47,3 @@ Generated: 2026-04-18 (Tests A + B: 2026-04-19)
 - Hybrid "100%" numbers (claim-only + synthesiser) are largely tautological by construction and are NOT the bridge-capability claim; cite Tests A + B instead. See `scorecard.json`, `scorecard_paraphrase.json`.
 - See paper §4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
 
-_(Original long REPORT archived at `1-research/nbs-bridge/paper-reports/gcode/REPORT.md`.)_

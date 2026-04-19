@@ -48,4 +48,3 @@ Generated: 2026-04-18 (sampled temp=0.8 top-k=40 seed=42)
 - Single-seed (seed=42); multi-seed deferred.
 - See paper §4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
 
-_(Original long REPORT archived at `1-research/nbs-bridge/paper-reports/midi/REPORT.md`.)_

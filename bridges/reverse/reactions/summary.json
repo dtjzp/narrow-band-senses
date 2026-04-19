@@ -1,0 +1,43 @@
+{
+  "domain": "reactions",
+  "structure_score": 0.449,
+  "classification": "FAIL",
+  "verdict_counts": {
+    "FAIL": 3
+  },
+  "cat_match_mean": 0.033854166666666664,
+  "cat_match_std": 0.05863713671457137,
+  "per_seed_cat_match": [
+    0.1015625,
+    0.0,
+    0.0
+  ],
+  "per_seed_verdicts": [
+    "FAIL",
+    "FAIL",
+    "FAIL"
+  ],
+  "per_cat_unique_rate_means": {
+    "elimination": 0.15625,
+    "rearrangement": 0.15625,
+    "substitution": 0.08333333333333333,
+    "addition": 0.08333333333333333
+  },
+  "prediction": {
+    "cat_match_min": 0.45,
+    "unique_gen_min": 0.3,
+    "n_cats_above_thresh": 3
+  },
+  "prediction_result": "NOT MET",
+  "prediction_cat_match_met": false,
+  "prediction_unique_met": false,
+  "corpus_size": 1280,
+  "roundtrip_accuracy": 1.0,
+  "kept_categories": [
+    "addition",
+    "elimination",
+    "substitution",
+    "rearrangement"
+  ],
+  "dropped_categories": []
+}

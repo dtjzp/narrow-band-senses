@@ -4,6 +4,22 @@ Cross-cutting figures used in the paper's main text. Per-domain reverse-bridge P
 
 All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 
+## Paper-caption → repo-filename mapping
+
+The paper's current captions use slightly different filenames than the repo uses internally. Use this mapping if you're reading the paper PDF and looking for a specific figure file here:
+
+| Paper caption name | Repo filename | Status |
+|---|---|---|
+| `figure1_entropy_compressibility.pdf` | `fig_main_ss_correlation.{png,pdf}` | present |
+| `fig2_forward_bridge_universality.pdf` | `fig_bridge_contribution.{png,pdf}` | present |
+| `fig3_reverse_bridge_10poc.pdf` | — | **pending generation** |
+| `fig4_three_branch_typology.pdf` | — | **pending generation** |
+| `fig5_ss_trl_playbook.pdf` | — | **pending generation** |
+
+The three "pending generation" figures are referenced in the paper's Results section but have not yet been composed; see the paper's figure-composition spec (`docs/superpowers/specs/2026-04-19-nbs-figure-composition-spec.md` in the author's workspace).
+
+Paper captions will be reconciled to the repo filenames (or vice versa) before submission.
+
 ## §3 Entropy criterion (Factor A)
 
 | Figure | File | Shows |
@@ -16,7 +32,7 @@ All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 
 | Figure | File | Shows |
 |---|---|---|
-| Fig 2 | `fig_bridge_contribution.{png,pdf}` | Bridge-vs-zero-baseline bits across all LM scales × 8 domains |
+| Fig 2 | `fig_bridge_contribution.{png,pdf}` | Bridge-vs-zero-baseline bits across all LM scales × 16 domains |
 | Fig S6 | `fig_bridge_contribution_xl_n16.{png,pdf}` | Extended n = 16 at XL encoder |
 
 ### §4.3 LM capacity compresses SS dependence (Factor C)
@@ -33,7 +49,7 @@ All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 | Fig 4 | `fig_s_model_scaling.{png,pdf}` | Val loss vs domain-model scale (S/M/XL) |
 | Fig S11 | `fig_arch_comparison.{png,pdf}` | MLP vs Q-Former vs Linear projection (Factor B — architecture axis) |
 
-### §4.5 Reverse-bridge capability (8 domains)
+### §4.5 Reverse-bridge capability (10 domains)
 
 Per-domain scorecard + diagnostics figures live in `../bridges/reverse/{domain}/figures/`:
 

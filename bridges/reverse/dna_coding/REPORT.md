@@ -48,4 +48,3 @@ Cross-category leakage to dominant (`high-GC`): **43.0%**. Mode-collapse diagnos
 - Single-seed (seed=42).
 - See paper §4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
 
-_(Original long REPORT archived at `1-research/nbs-bridge/paper-reports/dna_coding/REPORT.md`.)_

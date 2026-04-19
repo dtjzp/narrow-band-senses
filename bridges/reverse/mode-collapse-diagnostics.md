@@ -4,7 +4,7 @@
 
 ## Why this exists
 
-Early in the 8-PoC sequence, we reported:
+Early in the 10-PoC sequence, we reported:
 
 - **Network (SS = 0.126)**: aggregate cat-match 46.4%. Looked like partial capability.
 - **Python (SS = 0.523)**: aggregate feat-match 9.38%. Looked like weak feature-recovery.

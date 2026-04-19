@@ -4,7 +4,14 @@ Emits checkpoints in the format expected by phase_reverse_bridge_v2.load_s_model
   {domain}_S_s42.pt with keys: state_dict, vocab, sep_token, n_layers, d_model,
   n_heads, context_len.
 
-~2-3 minutes per domain on A100.
+Usage:
+    python train_s.py                                      # defaults: 3 domains, 10 epochs
+    python train_s.py --domains quantum --epochs 5
+    python train_s.py --data-dir /path/to/data --ckpt-dir /path/to/ckpts
+
+~2-3 minutes per domain on A100. Raw per-domain {name}_1M.txt streams are
+not shipped in the public repo (on Drive / pending Zenodo deposit); supply
+--data-dir or place them under experiment/code/data/.
 """
 from __future__ import annotations
 import sys, os, time, json, math, random
@@ -13,32 +20,34 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-SURVEY_CODE = '/content/drive/MyDrive/nbs-survey/code'
-if SURVEY_CODE not in sys.path:
-    sys.path.insert(0, SURVEY_CODE)
+# Make the shared character-transformer package importable from repo root.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-from config import MODEL_CONFIGS, TRAIN_CONFIG, DISCRETE_DOMAINS, TRAIN_FRAC, VAL_FRAC
-from model import CharTransformer
-from dataset import CharDataset, build_vocab
+from experiment.code.config import MODEL_CONFIGS, TRAIN_CONFIG, DISCRETE_DOMAINS, TRAIN_FRAC, VAL_FRAC
+from experiment.code.model import CharTransformer
+from experiment.code.dataset import CharDataset, build_vocab
 
-DATA_DIR = Path('/content/drive/MyDrive/nbs-survey/data')
-CKPT_DIR = Path('/content/drive/MyDrive/nbs-bridge/checkpoints')
+DEFAULT_DATA_DIR = REPO_ROOT / "experiment" / "code" / "data"
+DEFAULT_CKPT_DIR = REPO_ROOT / "factor-b-domain-model-capacity" / "checkpoints"
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 SEED = 42
 CTX = 512
 MODEL_SIZE = 'S'
 
 
-def train_one(domain: str, max_epochs: int = 10, verbose: bool = True):
+def train_one(domain: str, data_dir: Path, ckpt_dir: Path,
+              max_epochs: int = 10, verbose: bool = True):
     random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(SEED)
-    out_path = CKPT_DIR / f'{domain}_S_s42.pt'
+    out_path = ckpt_dir / f'{domain}_S_s42.pt'
     if out_path.exists():
         print(f'[train_s] {domain}: checkpoint exists, skipping')
         return str(out_path)
 
-    text_path = DATA_DIR / f'{domain}_1M.txt'
+    text_path = data_dir / f'{domain}_1M.txt'
     if not text_path.exists():
         raise FileNotFoundError(f'missing training text: {text_path}')
     text = text_path.read_text(encoding='utf-8')
@@ -118,7 +127,6 @@ def train_one(domain: str, max_epochs: int = 10, verbose: bool = True):
             best_val = val_loss
             best_state = {k: v.cpu().clone() for k, v in model.state_dict().items()}
 
-    # Save checkpoint in expected format
     ckpt = {
         'state_dict': best_state,
         'vocab': vocab,
@@ -131,7 +139,7 @@ def train_one(domain: str, max_epochs: int = 10, verbose: bool = True):
         'history': history,
         'elapsed_sec': time.time() - t0,
     }
-    CKPT_DIR.mkdir(parents=True, exist_ok=True)
+    ckpt_dir.mkdir(parents=True, exist_ok=True)
     torch.save(ckpt, out_path)
     bpc = best_val / math.log(2)
     print(f'[train_s/{domain}] DONE. best_val={best_val:.4f} bpc={bpc:.4f} saved={out_path}', flush=True)
@@ -143,10 +151,14 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--domains', nargs='+', default=['python_code', 'network', 'quantum'])
     ap.add_argument('--epochs', type=int, default=10)
+    ap.add_argument('--data-dir', type=Path, default=DEFAULT_DATA_DIR,
+                    help=f'Directory with per-domain {{name}}_1M.txt streams. Default: {DEFAULT_DATA_DIR}')
+    ap.add_argument('--ckpt-dir', type=Path, default=DEFAULT_CKPT_DIR,
+                    help=f'Directory to write checkpoints. Default: {DEFAULT_CKPT_DIR}')
     args = ap.parse_args()
     for d in args.domains:
         try:
-            train_one(d, max_epochs=args.epochs)
+            train_one(d, data_dir=args.data_dir, ckpt_dir=args.ckpt_dir, max_epochs=args.epochs)
         except Exception as e:
             print(f'[train_s/{d}] FAILED: {type(e).__name__}: {e}', flush=True)
             import traceback; traceback.print_exc()

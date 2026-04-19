@@ -1,0 +1,50 @@
+{
+  "domain": "atc",
+  "seed": 1337,
+  "total_rates": {
+    "cat_match": 0.6131386861313869,
+    "parse_ok": 1.0
+  },
+  "per_category": {
+    "climbing": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 1.0,
+      "intra_hamming": 10.7,
+      "max_leakage": 0.0
+    },
+    "mid-cruise": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 12.0,
+      "max_leakage": 0.9375
+    },
+    "high-cruise": {
+      "n": 19,
+      "unique_rate": 0.05263157894736842,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 1.0,
+      "intra_hamming": 0.0,
+      "max_leakage": 0.0
+    },
+    "low-altitude": {
+      "n": 22,
+      "unique_rate": 0.18181818181818182,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 0.045454545454545456,
+      "intra_hamming": 45.12,
+      "max_leakage": 0.9545454545454546
+    },
+    "descending": {
+      "n": 32,
+      "unique_rate": 0.0625,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 1.0,
+      "intra_hamming": 2.08,
+      "max_leakage": 0.0
+    }
+  }
+}

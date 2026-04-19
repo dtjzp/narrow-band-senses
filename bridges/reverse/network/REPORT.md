@@ -48,4 +48,3 @@ Cross-category leakage to dominant (`nine-heavy`): **60.2%**. Mode-collapse diag
 - Single-seed (seed=42). Network is a framework-prediction-validation PoC — the failure confirms SS-threshold prediction, not a capability miss.
 - See paper §4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
 
-_(Original long REPORT archived at `1-research/nbs-bridge/paper-reports/network/REPORT.md`.)_

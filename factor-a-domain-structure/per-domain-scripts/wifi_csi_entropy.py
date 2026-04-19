@@ -34,7 +34,7 @@ if hasattr(sys.stdout, "reconfigure"):
 # ── Path setup ────────────────────────────────────────────────────────────────
 ROOT = Path(__file__).parent.parent          # 1-research/
 SCRIPT_DIR = Path(__file__).parent          # 1-research/nbs-survey/
-sys.path.insert(0, str(ROOT / "nbs-experiment"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from entropy import (
     compute_ngram_counts,

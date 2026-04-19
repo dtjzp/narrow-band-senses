@@ -40,7 +40,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Entropy module
-sys.path.insert(0, str(REPO_ROOT / "1-research" / "nbs-experiment"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from entropy import (
     compute_ngram_counts,
     compute_entropy_miller_madow,

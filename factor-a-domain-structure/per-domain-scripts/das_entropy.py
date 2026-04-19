@@ -22,7 +22,7 @@ import json
 import numpy as np
 import h5py
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'nbs-experiment'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from entropy import (
     compute_ngram_counts,
     compute_entropy_miller_madow,

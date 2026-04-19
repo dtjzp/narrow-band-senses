@@ -1,0 +1,59 @@
+{
+  "domain": "reactions",
+  "seed": 1337,
+  "suffix": "spec3v2_s1337",
+  "total_rates": {
+    "cat_match": 0.0,
+    "parse_ok": 0.03125
+  },
+  "per_category": {
+    "elimination": {
+      "n": 32,
+      "unique_rate": 0.28125,
+      "parse_ok_rate": 0.03125,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 274.68,
+      "max_leakage": 0.03125
+    },
+    "rearrangement": {
+      "n": 32,
+      "unique_rate": 0.15625,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 40.62,
+      "max_leakage": 0.0
+    },
+    "substitution": {
+      "n": 32,
+      "unique_rate": 0.09375,
+      "parse_ok_rate": 0.0,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 14.16,
+      "max_leakage": 0.0
+    },
+    "addition": {
+      "n": 32,
+      "unique_rate": 0.09375,
+      "parse_ok_rate": 0.09375,
+      "cat_match_rate": 0.0,
+      "intra_hamming": 29.58,
+      "max_leakage": 0.09375
+    }
+  },
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "elimination: unique_rate=0.28 < 0.30",
+    "rearrangement: unique_rate=0.16 < 0.30",
+    "substitution: unique_rate=0.09 < 0.30",
+    "substitution: intra_hamming=14.2 < 15",
+    "addition: unique_rate=0.09 < 0.30"
+  ],
+  "training_meta": {
+    "best_val_loss": 0.6691026437492151,
+    "best_epoch": 30,
+    "n_train": 1024,
+    "n_val": 128,
+    "n_eval": 128,
+    "train_elapsed_sec": 143.7
+  }
+}

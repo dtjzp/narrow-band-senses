@@ -1,0 +1,45 @@
+{
+  "domain": "atc",
+  "structure_score": 0.563,
+  "classification": "FAIL",
+  "verdict_counts": {
+    "FAIL": 3
+  },
+  "cat_match_mean": 0.5206812652068127,
+  "cat_match_std": 0.09910176084874114,
+  "per_seed_cat_match": [
+    0.5328467153284672,
+    0.41605839416058393,
+    0.6131386861313869
+  ],
+  "per_seed_verdicts": [
+    "FAIL",
+    "FAIL",
+    "FAIL"
+  ],
+  "per_cat_unique_rate_means": {
+    "climbing": 0.10416666666666667,
+    "mid-cruise": 0.052083333333333336,
+    "high-cruise": 0.05263157894736842,
+    "low-altitude": 0.12121212121212122,
+    "descending": 0.08333333333333333
+  },
+  "prediction": {
+    "cat_match_min": 0.5,
+    "unique_gen_min": 0.3,
+    "n_cats_above_thresh": 3
+  },
+  "prediction_result": "NOT MET",
+  "prediction_cat_match_met": true,
+  "prediction_unique_met": false,
+  "corpus_size": 1353,
+  "roundtrip_accuracy": 1.0,
+  "kept_categories": [
+    "climbing",
+    "descending",
+    "high-cruise",
+    "mid-cruise",
+    "low-altitude"
+  ],
+  "dropped_categories": []
+}
