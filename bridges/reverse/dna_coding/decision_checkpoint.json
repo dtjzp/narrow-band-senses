@@ -1,0 +1,20 @@
+{
+  "window_size_chosen": 200,
+  "sample_size": 2000,
+  "distribution": {
+    "with-ORF": 0.5355,
+    "high-GC": 0.183,
+    "mid-GC": 0.2215,
+    "low-GC": 0.06
+  },
+  "categories_defined": [
+    "low-GC",
+    "mid-GC",
+    "high-GC",
+    "homopolymer-rich",
+    "with-ORF"
+  ],
+  "skipped_categories_below_5pct": [
+    "homopolymer-rich"
+  ]
+}

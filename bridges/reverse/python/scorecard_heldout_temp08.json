@@ -1,0 +1,71 @@
+{
+  "total": {
+    "n": 160,
+    "parse_ok": 160,
+    "category_match": 66,
+    "feature_match": 15
+  },
+  "per_category": {
+    "collection": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.65625,
+      "feature_match_rate": 0.0,
+      "unique_rate": 0.96875
+    },
+    "loop": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.28125,
+      "feature_match_rate": 0.28125,
+      "unique_rate": 1.0
+    },
+    "complex": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.09375,
+      "feature_match_rate": 0.09375,
+      "unique_rate": 1.0
+    },
+    "arithmetic": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.9375,
+      "feature_match_rate": 0.0,
+      "unique_rate": 0.90625
+    },
+    "conditional": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.09375,
+      "feature_match_rate": 0.09375,
+      "unique_rate": 1.0
+    }
+  },
+  "total_rates": {
+    "parse_ok": 1.0,
+    "category_match": 0.4125,
+    "feature_match": 0.09375
+  },
+  "roundtrip_rate": 1.0,
+  "decision_checkpoint": {
+    "window_size_chosen": 400,
+    "distribution": {
+      "conditional": 0.058,
+      "arithmetic": 0.628,
+      "complex": 0.114,
+      "loop": 0.134,
+      "collection": 0.066
+    },
+    "dominant_frac": 0.628,
+    "skipped_categories": [],
+    "fallback_applied": "window_size_retried_picked_400"
+  },
+  "training_meta": {
+    "best_val_loss": 1.6178193479381136,
+    "best_epoch": 20,
+    "n_train": 1280,
+    "n_val": 160,
+    "n_eval": 160
+  }
+}

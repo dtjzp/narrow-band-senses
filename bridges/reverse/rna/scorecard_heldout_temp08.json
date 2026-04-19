@@ -1,0 +1,53 @@
+{
+  "per_category": {
+    "nested-helical": {
+      "n": 32,
+      "cat_match_rate": 0.5,
+      "unique_rate": 0.1875,
+      "n_paired_rate": 0.0625,
+      "n_stems_rate": 0.25,
+      "max_stem_length_rate": 0.0625,
+      "max_loop_size_rate": 0.6875,
+      "nesting_depth_rate": 0.03125,
+      "parse_ok_rate": 1.0
+    },
+    "bulge-rich": {
+      "n": 32,
+      "cat_match_rate": 1.0,
+      "unique_rate": 0.25,
+      "n_paired_rate": 0.15625,
+      "n_stems_rate": 0.375,
+      "max_stem_length_rate": 0.03125,
+      "max_loop_size_rate": 0.03125,
+      "nesting_depth_rate": 0.125,
+      "parse_ok_rate": 1.0
+    },
+    "multiloop": {
+      "n": 32,
+      "cat_match_rate": 0.125,
+      "unique_rate": 0.25,
+      "n_paired_rate": 0.0,
+      "n_stems_rate": 0.1875,
+      "max_stem_length_rate": 0.15625,
+      "max_loop_size_rate": 0.65625,
+      "nesting_depth_rate": 1.0,
+      "parse_ok_rate": 1.0
+    },
+    "simple-hairpin": {
+      "n": 32,
+      "cat_match_rate": 1.0,
+      "unique_rate": 0.03125,
+      "n_paired_rate": 0.6875,
+      "n_stems_rate": 1.0,
+      "max_stem_length_rate": 0.65625,
+      "max_loop_size_rate": 0.25,
+      "nesting_depth_rate": 0.96875,
+      "parse_ok_rate": 1.0
+    }
+  },
+  "diagnostics_verdict": "FAIL",
+  "total": {
+    "n": 128,
+    "cat_match_rate": 0.65625
+  }
+}

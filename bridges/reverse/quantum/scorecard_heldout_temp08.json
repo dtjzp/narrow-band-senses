@@ -1,0 +1,73 @@
+{
+  "total": {
+    "n": 148,
+    "parse_ok": 148,
+    "category_match": 114,
+    "feature_match": 122
+  },
+  "per_category": {
+    "parameterised": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.625,
+      "feature_match_rate": 0.84375,
+      "unique_rate": 0.9375
+    },
+    "highly-entangled": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.90625,
+      "feature_match_rate": 0.90625,
+      "unique_rate": 0.9375
+    },
+    "measurement-heavy": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.9375,
+      "feature_match_rate": 0.6875,
+      "unique_rate": 0.78125
+    },
+    "entangling": {
+      "n": 20,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.4,
+      "feature_match_rate": 0.7,
+      "unique_rate": 0.85
+    },
+    "single-qubit": {
+      "n": 32,
+      "parse_ok_rate": 1.0,
+      "category_match_rate": 0.84375,
+      "feature_match_rate": 0.9375,
+      "unique_rate": 0.375
+    }
+  },
+  "total_rates": {
+    "parse_ok": 1.0,
+    "category_match": 0.7702702702702703,
+    "feature_match": 0.8243243243243243
+  },
+  "roundtrip_rate": 1.0,
+  "decision_checkpoint": {
+    "window_size_chosen": 200,
+    "distribution": {
+      "single-qubit": 0.122,
+      "measurement-heavy": 0.234,
+      "entangling": 0.028,
+      "highly-entangled": 0.482,
+      "parameterised": 0.134
+    },
+    "dominant_frac": 0.482,
+    "skipped_categories": [
+      "entangling"
+    ],
+    "fallback_applied": null
+  },
+  "training_meta": {
+    "best_val_loss": 0.9269238261403061,
+    "best_epoch": 19,
+    "n_train": 1174,
+    "n_val": 146,
+    "n_eval": 148
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "atc": {
+    "h0": 4.759579,
+    "h3": 2.078835,
+    "structure_score": 0.563231,
+    "n_chars": 100000,
+    "alphabet": 38
+  },
+  "bioreactor": {
+    "h0": 3.943103,
+    "h3": 0.271594,
+    "structure_score": 0.931122,
+    "n_chars": 27563,
+    "alphabet": 20
+  },
+  "crispr": {
+    "h0": 2.781673,
+    "h3": 1.775999,
+    "structure_score": 0.361536,
+    "n_chars": 1103820,
+    "alphabet": 9
+  },
+  "das": {
+    "h0": 4.046457,
+    "h3": 2.617488,
+    "structure_score": 0.353141,
+    "n_chars": 1000000,
+    "alphabet": 20
+  },
+  "dna_coding": {
+    "h0": 1.999212,
+    "h3": 1.932684,
+    "structure_score": 0.033277,
+    "n_chars": 1000000,
+    "alphabet": 4
+  },
+  "dna_noncoding": {
+    "h0": 1.996915,
+    "h3": 1.923507,
+    "structure_score": 0.036761,
+    "n_chars": 1000000,
+    "alphabet": 4
+  },
+  "eeg": {
+    "h0": 3.690427,
+    "h3": 2.755005,
+    "structure_score": 0.253473,
+    "n_chars": 122000,
+    "alphabet": 20
+  },
+  "english": {
+    "h0": 4.086693,
+    "h3": 2.608416,
+    "structure_score": 0.361729,
+    "n_chars": 1000000,
+    "alphabet": 27
+  },
+  "financial": {
+    "h0": 3.309193,
+    "h3": 3.271923,
+    "structure_score": 0.011262,
+    "n_chars": 258668,
+    "alphabet": 10
+  },
+  "game_scenes": {
+    "h0": 4.055592,
+    "h3": 1.300671,
+    "structure_score": 0.67929,
+    "n_chars": 1000000,
+    "alphabet": 83
+  },
+  "gcode": {
+    "h0": 3.805766,
+    "h3": 2.574741,
+    "structure_score": 0.323463,
+    "n_chars": 1000000,
+    "alphabet": 18
+  },
+  "greek": {
+    "h0": 4.11635,
+    "h3": 2.917429,
+    "structure_score": 0.291258,
+    "n_chars": 1000000,
+    "alphabet": 26
+  },
+  "hormonal": {
+    "h0": 4.321938,
+    "h3": 0.965899,
+    "structure_score": 0.776512,
+    "n_chars": 1000000,
+    "alphabet": 20
+  },
+  "midi": {
+    "h0": 5.776695,
+    "h3": 3.815493,
+    "structure_score": 0.339502,
+    "n_chars": 786944,
+    "alphabet": 87
+  },
+  "network": {
+    "h0": 1.418685,
+    "h3": 1.239472,
+    "structure_score": 0.126324,
+    "n_chars": 1000000,
+    "alphabet": 10
+  },
+  "protein": {
+    "h0": 4.195466,
+    "h3": 4.135878,
+    "structure_score": 0.014203,
+    "n_chars": 1006675,
+    "alphabet": 22
+  },
+  "python_code": {
+    "h0": 4.625271,
+    "h3": 2.207759,
+    "structure_score": 0.522675,
+    "n_chars": 1000000,
+    "alphabet": 96
+  },
+  "quantum": {
+    "h0": 4.954761,
+    "h3": 1.494302,
+    "structure_score": 0.698411,
+    "n_chars": 775268,
+    "alphabet": 58
+  },
+  "reactions": {
+    "h0": 3.381682,
+    "h3": 1.864913,
+    "structure_score": 0.448525,
+    "n_chars": 1200000,
+    "alphabet": 50
+  },
+  "rna": {
+    "h0": 2.958853,
+    "h3": 0.962045,
+    "structure_score": 0.674859,
+    "n_chars": 1000000,
+    "alphabet": 14
+  },
+  "satellite": {
+    "h0": 3.898055,
+    "h3": 2.666161,
+    "structure_score": 0.316028,
+    "n_chars": 1000000,
+    "alphabet": 50
+  },
+  "seismo": {
+    "h0": 4.084037,
+    "h3": 3.22986,
+    "structure_score": 0.20915,
+    "n_chars": 172800,
+    "alphabet": 20
+  },
+  "seti": {
+    "h0": 2.107403,
+    "h3": 2.105995,
+    "structure_score": 0.000668,
+    "n_chars": 1000000,
+    "alphabet": 5
+  },
+  "smiles": {
+    "h0": 3.969352,
+    "h3": 1.776105,
+    "structure_score": 0.552545,
+    "n_chars": 1140495,
+    "alphabet": 67
+  },
+  "tidal": {
+    "h0": 3.976791,
+    "h3": 1.364055,
+    "structure_score": 0.656996,
+    "n_chars": 224548,
+    "alphabet": 20
+  },
+  "traffic": {
+    "h0": 4.317386,
+    "h3": 2.153163,
+    "structure_score": 0.501281,
+    "n_chars": 50000,
+    "alphabet": 20
+  },
+  "weather": {
+    "h0": 3.565774,
+    "h3": 2.906756,
+    "structure_score": 0.184818,
+    "n_chars": 51004,
+    "alphabet": 20
+  },
+  "whale": {
+    "h0": 2.463856,
+    "h3": 0.559153,
+    "structure_score": 0.773058,
+    "n_chars": 120004,
+    "alphabet": 20
+  },
+  "wifi_csi": {
+    "h0": 4.314019,
+    "h3": 2.053021,
+    "structure_score": 0.524105,
+    "n_chars": 1000000,
+    "alphabet": 20
+  }
+}

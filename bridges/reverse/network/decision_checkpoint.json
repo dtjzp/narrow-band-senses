@@ -1,0 +1,19 @@
+{
+  "window_size_chosen": 200,
+  "sample_size": 2000,
+  "distribution": {
+    "nine-heavy": 0.328,
+    "zero-dense": 0.245,
+    "five-heavy": 0.216,
+    "one-heavy": 0.157,
+    "other": 0.053
+  },
+  "categories_defined": [
+    "zero-dense",
+    "nine-heavy",
+    "five-heavy",
+    "one-heavy"
+  ],
+  "skipped_categories": [],
+  "notes": "Data-driven redefinition from observed distribution on network_1M.txt (digits 0-9, ~75% zeros). v1 letter-encoding categories were invalid for this data."
+}

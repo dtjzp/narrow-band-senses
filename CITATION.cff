@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository or its data, please cite the following."
+title: "Narrow-Band Senses: An Information-Theoretic Framework for Multimodal AI Perception"
+authors:
+  - family-names: Ziekenoppasser-Powell
+    given-names: Daniel
+    affiliation: "Independent researcher, United Kingdom"
+    website: "https://danielzp.com"
+year: 2026
+type: article
+# journal and doi to be added on acceptance
+# doi: 10.xxxx/xxxx
+# journal: "Nature Machine Intelligence"
+url: "https://github.com/<user>/nbs-bridge-public"
+keywords:
+  - narrow-band senses
+  - information theory
+  - multimodal perception
+  - language models
+  - entropy
+  - structure score
+  - bridge learning

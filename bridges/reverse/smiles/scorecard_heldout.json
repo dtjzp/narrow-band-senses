@@ -1,0 +1,84 @@
+{
+  "n_prompts": 384,
+  "rates": {
+    "parse_success": 0.7890625,
+    "sanitize_success": 0.7890625,
+    "category_match": 0.3177083333333333,
+    "mw_match": 0.11197916666666667,
+    "heavy_atoms_match": 0.14322916666666666,
+    "ring_count_match": 0.3255208333333333,
+    "aromatic_ring_count_match": 0.3723958333333333,
+    "heteroatom_subset_match": 0.40625,
+    "functional_group_match": 0.25895316804407714,
+    "logp_match": 0.18489583333333334,
+    "h_donor_match": 0.6171875,
+    "h_acceptor_match": 0.4244791666666667
+  },
+  "by_category": {
+    "aromatic-simple": {
+      "parse_success": 0.8181818181818182,
+      "sanitize_success": 0.8181818181818182,
+      "category_match": 0.2909090909090909,
+      "mw_match": 0.16363636363636364,
+      "heavy_atoms_match": 0.21818181818181817,
+      "ring_count_match": 0.45454545454545453,
+      "aromatic_ring_count_match": 0.4818181818181818,
+      "heteroatom_subset_match": 0.5818181818181818,
+      "functional_group_match": 0.35714285714285715,
+      "logp_match": 0.2727272727272727,
+      "h_donor_match": 0.7363636363636363,
+      "h_acceptor_match": 0.5818181818181818
+    },
+    "complex-polycyclic": {
+      "parse_success": 0.6261682242990654,
+      "sanitize_success": 0.6261682242990654,
+      "category_match": 0.102803738317757,
+      "mw_match": 0.06542056074766354,
+      "heavy_atoms_match": 0.056074766355140186,
+      "ring_count_match": 0.037383177570093455,
+      "aromatic_ring_count_match": 0.1588785046728972,
+      "heteroatom_subset_match": 0.21495327102803738,
+      "functional_group_match": 0.11764705882352941,
+      "logp_match": 0.09345794392523364,
+      "h_donor_match": 0.4392523364485981,
+      "h_acceptor_match": 0.2336448598130841
+    },
+    "heterocyclic": {
+      "parse_success": 0.8354430379746836,
+      "sanitize_success": 0.8354430379746836,
+      "category_match": 0.3924050632911392,
+      "mw_match": 0.12658227848101267,
+      "heavy_atoms_match": 0.17721518987341772,
+      "ring_count_match": 0.3037974683544304,
+      "aromatic_ring_count_match": 0.2911392405063291,
+      "heteroatom_subset_match": 0.4177215189873418,
+      "functional_group_match": 0.32,
+      "logp_match": 0.21518987341772153,
+      "h_donor_match": 0.6582278481012658,
+      "h_acceptor_match": 0.3924050632911392
+    },
+    "functional-rich": {
+      "parse_success": 0.9090909090909091,
+      "sanitize_success": 0.9090909090909091,
+      "category_match": 0.5454545454545454,
+      "mw_match": 0.09090909090909091,
+      "heavy_atoms_match": 0.125,
+      "ring_count_match": 0.5340909090909091,
+      "aromatic_ring_count_match": 0.5681818181818182,
+      "heteroatom_subset_match": 0.4090909090909091,
+      "functional_group_match": 0.26136363636363635,
+      "logp_match": 0.1590909090909091,
+      "h_donor_match": 0.6477272727272727,
+      "h_acceptor_match": 0.48863636363636365
+    }
+  },
+  "by_category_n": {
+    "aromatic-simple": 110,
+    "complex-polycyclic": 107,
+    "heterocyclic": 79,
+    "functional-rich": 88
+  },
+  "unique_canonical_smiles": 290,
+  "unique_canonical_fraction": 0.9570957095709571,
+  "overall_fidelity": 0.4509548611111111
+}

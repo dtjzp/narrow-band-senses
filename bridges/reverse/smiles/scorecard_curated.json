@@ -1,0 +1,80 @@
+{
+  "n_prompts": 24,
+  "rates": {
+    "parse_success": 0.8333333333333334,
+    "sanitize_success": 0.8333333333333334,
+    "category_match": 0.5416666666666666,
+    "mw_match": 0.08333333333333333,
+    "heavy_atoms_match": 0.16666666666666666,
+    "ring_count_match": 0.4583333333333333,
+    "aromatic_ring_count_match": 0.5833333333333334,
+    "functional_group_match": 0.3333333333333333,
+    "heteroatom_subset_match": 0.0,
+    "logp_match": 0.0,
+    "h_donor_match": 0.0,
+    "h_acceptor_match": 0.0
+  },
+  "by_category": {
+    "aromatic-simple": {
+      "parse_success": 0.6666666666666666,
+      "sanitize_success": 0.6666666666666666,
+      "category_match": 0.16666666666666666,
+      "mw_match": 0.0,
+      "heavy_atoms_match": 0.16666666666666666,
+      "ring_count_match": 0.3333333333333333,
+      "aromatic_ring_count_match": 0.6666666666666666,
+      "functional_group_match": 0.16666666666666666,
+      "heteroatom_subset_match": 0.0,
+      "logp_match": 0.0,
+      "h_donor_match": 0.0,
+      "h_acceptor_match": 0.0
+    },
+    "heterocyclic": {
+      "parse_success": 0.8333333333333334,
+      "sanitize_success": 0.8333333333333334,
+      "category_match": 0.5,
+      "mw_match": 0.16666666666666666,
+      "heavy_atoms_match": 0.16666666666666666,
+      "ring_count_match": 0.3333333333333333,
+      "aromatic_ring_count_match": 0.3333333333333333,
+      "functional_group_match": 0.3333333333333333,
+      "heteroatom_subset_match": 0.0,
+      "logp_match": 0.0,
+      "h_donor_match": 0.0,
+      "h_acceptor_match": 0.0
+    },
+    "functional-rich": {
+      "parse_success": 1.0,
+      "sanitize_success": 1.0,
+      "category_match": 1.0,
+      "mw_match": 0.0,
+      "heavy_atoms_match": 0.16666666666666666,
+      "ring_count_match": 0.8333333333333334,
+      "aromatic_ring_count_match": 0.8333333333333334,
+      "functional_group_match": 0.5
+    },
+    "complex-polycyclic": {
+      "parse_success": 0.8333333333333334,
+      "sanitize_success": 0.8333333333333334,
+      "category_match": 0.5,
+      "mw_match": 0.16666666666666666,
+      "heavy_atoms_match": 0.16666666666666666,
+      "ring_count_match": 0.3333333333333333,
+      "aromatic_ring_count_match": 0.5,
+      "functional_group_match": 0.3333333333333333,
+      "heteroatom_subset_match": 0.0,
+      "logp_match": 0.0,
+      "h_donor_match": 0.0,
+      "h_acceptor_match": 0.0
+    }
+  },
+  "by_category_n": {
+    "aromatic-simple": 6,
+    "heterocyclic": 6,
+    "functional-rich": 6,
+    "complex-polycyclic": 6
+  },
+  "unique_canonical_smiles": 20,
+  "unique_canonical_fraction": 1.0,
+  "overall_fidelity": 0.5555555555555556
+}

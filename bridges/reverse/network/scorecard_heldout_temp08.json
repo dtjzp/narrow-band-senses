@@ -1,0 +1,39 @@
+{
+  "per_category": {
+    "five-heavy": {
+      "n": 32,
+      "cat_match_rate": 0.0,
+      "unique_rate": 0.34375,
+      "feature_zero_match_rate": 1.0,
+      "feature_topnz_match_rate": 0.0
+    },
+    "one-heavy": {
+      "n": 32,
+      "cat_match_rate": 0.0,
+      "unique_rate": 0.21875,
+      "feature_zero_match_rate": 0.40625,
+      "feature_topnz_match_rate": 0.0
+    },
+    "nine-heavy": {
+      "n": 32,
+      "cat_match_rate": 1.0,
+      "unique_rate": 0.21875,
+      "feature_zero_match_rate": 1.0,
+      "feature_topnz_match_rate": 1.0
+    },
+    "zero-dense": {
+      "n": 32,
+      "cat_match_rate": 1.0,
+      "unique_rate": 0.0625,
+      "feature_zero_match_rate": 1.0,
+      "feature_topnz_match_rate": 0.5
+    }
+  },
+  "diagnostics_verdict": "FAIL",
+  "total": {
+    "n": 128,
+    "cat_match_rate": 0.5,
+    "feature_zero_match_rate": 0.8515625,
+    "feature_topnz_match_rate": 0.375
+  }
+}
