@@ -29,7 +29,7 @@ import numpy as np
 
 # ── Import entropy functions from Experiment 1 ──
 EXP1_DIR = Path(__file__).parent.parent / "nbs-experiment"
-sys.path.insert(0, str(EXP1_DIR))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from entropy import (
     compute_ngram_counts,

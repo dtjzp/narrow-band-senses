@@ -35,11 +35,14 @@ RANDOM_SEED = 42
 
 # ── Model Configs ──
 
+# Sizes S / M / XL are the canonical scales used in the paper (matches
+# factor-b-domain-model-capacity/architecture.md). XS is retained as a
+# small prototype size for dev runs; not referenced in the paper.
 MODEL_CONFIGS = {
-    "XS": {"n_layers": 2, "d_model": 128, "n_heads": 2},
-    "S":  {"n_layers": 4, "d_model": 256, "n_heads": 4},
-    "M":  {"n_layers": 8, "d_model": 512, "n_heads": 8},
-    "L":  {"n_layers": 12, "d_model": 768, "n_heads": 12},
+    "XS": {"n_layers": 2,  "d_model": 128,  "n_heads": 2},   # ~1M  (dev only)
+    "S":  {"n_layers": 6,  "d_model": 512,  "n_heads": 8},   # ~50M (paper "S")
+    "M":  {"n_layers": 12, "d_model": 768,  "n_heads": 12},  # ~130M (paper "M")
+    "XL": {"n_layers": 24, "d_model": 1024, "n_heads": 16},  # ~380M (paper "XL")
 }
 
 DEFAULT_CONTEXT_LEN = 512

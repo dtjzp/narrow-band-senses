@@ -8,6 +8,19 @@ This directory preserves approaches that were explored during the development of
 
 **Why this exists**: reviewers rightly ask "did you try X?" where X is often the naive first-choice. Preserving the attempts with honest reporting pre-empts the question and documents the empirical path from "we thought this would work" to "we found out it didn't and here's why."
 
+## ⚠ The scripts in this directory are NOT runnable as shipped
+
+Archive-era scripts were written against the author's original Colab + Google Drive workspace layout and contain hardcoded paths of the form `G:/My Drive/nbs-bridge/...` and `G:/My Drive/nbs-survey/...`. The data, corpora, and auxiliary modules at those paths are **not** preserved in the public repo — they are author-workspace artefacts pending Zenodo deposit on paper acceptance.
+
+Specifically:
+
+- `phase-2-cka/` scripts import a `phase2_cka` module that was **never ported** to the public repo. Both scripts there now raise `SystemExit` on import to prevent confusing failure messages. See that directory's README for the canonical Phase 2 CKA result.
+- `phase-3-4-natural-pairs/` and `phase-3-4-synthetic-pairs/` scripts all open `IN_PATH = "G:/My Drive/..."` at module top-level and will `FileNotFoundError` on any fresh clone. Path substitution is required to rerun.
+
+**These scripts are preserved as historical record only.** The canonical summary of each archived approach's outcome is in that subdirectory's `README.md` — the numeric results these scripts produced have been extracted into the README prose, so reviewers can evaluate the null findings without rerunning the code.
+
+If you genuinely need to rerun one of these scripts on your own data, expect to: (a) rewrite every `Path("G:/My Drive/...")` to your local path, (b) supply your own paired-description corpora, and (c) contact the corresponding author for the auxiliary modules (`phase2_cka`, `phase34_prepare_eval`) that are Drive-resident.
+
 ## Contents
 
 | Directory | What was tried | Why it was abandoned |

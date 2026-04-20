@@ -1,0 +1,9 @@
+{
+  "_note": "This per-domain JSON is a canonical-aggregate slice. For this domain the entropy was computed via the shared character-transformer pipeline in experiment/code/ rather than a per-domain standalone script, so no richer per-domain provenance (alphabet listing, encoding notes) was produced. See paper Tables S2a/S2b for full methodology.",
+  "domain": "dna_noncoding",
+  "h0": 1.996915,
+  "h3": 1.923507,
+  "structure_score": 0.036761,
+  "n_chars": 1000000,
+  "alphabet_size": 4
+}

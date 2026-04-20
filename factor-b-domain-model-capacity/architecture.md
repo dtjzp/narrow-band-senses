@@ -6,9 +6,12 @@ Three scales, all character-level, all autoregressive (GPT-2-like). Trained from
 
 | Scale | n_layer | n_head | d_model | d_ff | Params (approx) | Context | Training time per domain (A100) |
 |---|---|---|---|---|---|---|---|
+| XS | 2  | 2  | 128  | 512  | ~1 M       | 512 tokens | 30 s    |
 | S  | 6  | 8  | 512  | 2048 | **~50 M**  | 512 tokens | 2.5 min |
 | M  | 12 | 12 | 768  | 3072 | ~130 M     | 512 tokens | ~10 min |
 | XL | 24 | 16 | 1024 | 4096 | ~380 M     | 512 tokens | ~45 min |
+
+`MODEL_CONFIGS` in [`../experiment/code/config.py`](../experiment/code/config.py) matches this table for S / M / XL. XS is retained for dev / prototype work (e.g. the 2026-04-14 initial-release entropy survey ran at XS for early compute-budget reasons) but is **not** the scale used for any paper result.
 
 Vocabulary: per-domain character set + 3 special tokens (`<pad>`, `<bos>`, `<eos>`). Typical alphabet size is 4 (DNA) to ~100 (MIDI).
 
@@ -30,7 +33,7 @@ Vocabulary: per-domain character set + 3 special tokens (`<pad>`, `<bos>`, `<eos
 
 ## Validation loss reference points
 
-See [`results/scaling_summary.md`](results/scaling_summary.md) for per-domain S best-val and S→XL deltas. Authoritative per-run numbers live in `G:/My Drive/nbs-bridge/results/bridge_results_v2.json`.
+See [`results/scaling_summary.md`](results/scaling_summary.md) for per-domain S best-val and S→XL deltas. Authoritative per-run numbers aggregate into `bridge_results_v2.json` (Drive-resident, pending Zenodo DOI on paper acceptance).
 
 ## Why ~50M for S
 
@@ -38,4 +41,4 @@ See [`results/scaling_summary.md`](results/scaling_summary.md) for per-domain S 
 
 ## Checkpoints
 
-All S/M/XL checkpoints (per domain, per seed) are in `G:/My Drive/nbs-bridge/checkpoints/` and will be mirrored to Zenodo on paper acceptance.
+All S/M/XL checkpoints (per domain, per seed) are Drive-resident (~250 GB total) and will be mirrored to Zenodo on paper acceptance. Until the Zenodo DOI is live, reviewers needing specific checkpoints can contact the corresponding author ([danielzp.com](https://danielzp.com)).

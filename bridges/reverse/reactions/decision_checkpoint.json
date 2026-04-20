@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "corpus": {
+    "status": "ok",
+    "n_pairs": 1280,
+    "dist_before": {
+      "addition": 320,
+      "elimination": 640,
+      "substitution": 640,
+      "rearrangement": 640
+    },
+    "prevalence": {
+      "addition": 0.14285714285714285,
+      "elimination": 0.2857142857142857,
+      "substitution": 0.2857142857142857,
+      "rearrangement": 0.2857142857142857
+    },
+    "dist_after": {
+      "substitution": 320,
+      "addition": 320,
+      "elimination": 320,
+      "rearrangement": 320
+    },
+    "kept_cats": [
+      "addition",
+      "elimination",
+      "substitution",
+      "rearrangement"
+    ],
+    "dropped_cats": [],
+    "path": "/content/drive/MyDrive/nbs-bridge/paired_data/reactions_semantic_balanced/reactions.jsonl",
+    "source": "reactions_semantic_balanced"
+  },
+  "text_len": 1200000,
+  "window_size": 400,
+  "target_per_cat": 320,
+  "min_corpus_size": 960
+}

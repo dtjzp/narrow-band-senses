@@ -11,7 +11,7 @@ type: article
 # journal and doi to be added on acceptance
 # doi: 10.xxxx/xxxx
 # journal: "Nature Machine Intelligence"
-url: "https://github.com/<user>/nbs-bridge-public"
+url: "https://github.com/dtjzp/narrow-band-senses"
 keywords:
   - narrow-band senses
   - information theory

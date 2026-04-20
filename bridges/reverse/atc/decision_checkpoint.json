@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "corpus": {
+    "status": "ok",
+    "n_pairs": 1353,
+    "dist_before": {
+      "climbing": 640,
+      "descending": 640,
+      "high-cruise": 184,
+      "mid-cruise": 586,
+      "low-altitude": 209
+    },
+    "prevalence": {
+      "climbing": 0.283311199645861,
+      "descending": 0.283311199645861,
+      "high-cruise": 0.08145196989818504,
+      "mid-cruise": 0.2594068171757415,
+      "low-altitude": 0.09251881363435148
+    },
+    "dist_after": {
+      "mid-cruise": 320,
+      "descending": 320,
+      "low-altitude": 209,
+      "climbing": 320,
+      "high-cruise": 184
+    },
+    "kept_cats": [
+      "climbing",
+      "descending",
+      "high-cruise",
+      "mid-cruise",
+      "low-altitude"
+    ],
+    "dropped_cats": [],
+    "path": "/content/drive/MyDrive/nbs-bridge/paired_data/atc_semantic_balanced/atc.jsonl",
+    "source": "atc_semantic_balanced"
+  },
+  "text_len": 100000,
+  "window_size": 200,
+  "target_per_cat": 320,
+  "min_corpus_size": 960
+}

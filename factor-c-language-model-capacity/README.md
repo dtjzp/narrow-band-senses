@@ -26,9 +26,9 @@
 
 | File | Purpose |
 |---|---|
-| `aggregate_all.py` | Aggregates per-run training JSONs from Drive into the flat `bridge_results_v2.json` + prints Spearman tables per (arch, source, lm, s_size, metric). |
+| `aggregate_all.py` | Aggregates per-run training JSONs (from `--results-dir`, default `./results/`) into the flat `bridge_results_v2.json` + prints Spearman tables per (arch, source, lm, s_size, metric). |
 | `architecture.md` | Details of the forward-bridge projection into each LM's embedding space; tokeniser handling; prefix length |
-| `results/bridge_results_v2.json.md` | Schema documentation for the aggregated results file (the JSON itself lives on Drive / Zenodo) |
+| `results/bridge_results_v2.json.md` | Schema documentation for the aggregated results file (the JSON itself — ~97 per-run records — is Drive-resident pending Zenodo DOI). |
 | `results/lm_scale_correlation_tables.md` | Per-metric correlation tables across (n = 8, n = 16) × (GPT-2 small, GPT-2 medium, Pythia-1B) |
 
 ## Reproduce
@@ -37,8 +37,11 @@ Aggregate the correlation tables from per-run training JSONs:
 
 ```bash
 cd factor-c-language-model-capacity
-python aggregate_all.py   # reads G:/My Drive/nbs-bridge/results/, writes .../bridge_results_v2.json
+python aggregate_all.py                          # default: ./results/
+python aggregate_all.py --results-dir /path/to/per-run-jsons
 ```
+
+The authoritative per-run corpus (Drive-resident) will ship at a Zenodo DOI on paper acceptance; `lm_scale_correlation_tables.md` preserves the headline ρ values derived from that corpus in the meantime.
 
 Stdout: Spearman ρ tables per (arch, source, lm, s_size, metric). See `results/lm_scale_correlation_tables.md` for the committed reference copy.
 

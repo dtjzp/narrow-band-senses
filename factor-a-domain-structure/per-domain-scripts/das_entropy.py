@@ -22,7 +22,7 @@ import json
 import numpy as np
 import h5py
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'nbs-experiment'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from entropy import (
     compute_ngram_counts,
     compute_entropy_miller_madow,
@@ -45,7 +45,6 @@ os.makedirs(PROCESSED_DIR, exist_ok=True)
 H5_PATH = os.path.join(DATA_DIR, 'porotomo_dasv_eq1.h5')
 RESULTS_PATH = os.path.join(RESULTS_DIR, 'das_entropy.json')
 TEXT_LOCAL = os.path.join(PROCESSED_DIR, 'das_1M.txt')
-TEXT_GDRIVE = 'G:/My Drive/nbs-survey/data/das_1M.txt'
 
 N_BINS = 20
 ALPHABET = 'ABCDEFGHIJKLMNOPQRST'
@@ -221,12 +220,6 @@ def save_processed_text(encoded_channels):
     with open(TEXT_LOCAL, 'w') as f:
         f.write(concat)
     print(f'  Saved {len(concat):,} chars to {TEXT_LOCAL}')
-
-    gdrive_dir = os.path.dirname(TEXT_GDRIVE)
-    if os.path.exists(gdrive_dir):
-        with open(TEXT_GDRIVE, 'w') as f:
-            f.write(concat)
-        print(f'  Also saved to {TEXT_GDRIVE}')
 
 
 def main():

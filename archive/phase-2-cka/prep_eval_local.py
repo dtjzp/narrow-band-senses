@@ -1,5 +1,19 @@
-"""Local runner for phase34_prepare_eval.py, adapting paths from Colab to G: drive."""
+"""Local runner for phase34_prepare_eval.py, adapting paths from Colab to G: drive.
+
+=== ARCHIVED — NOT RUNNABLE AS SHIPPED ===================================
+Depends on `phase34_prepare_eval` (lived at `G:/My Drive/nbs-bridge/scripts/`)
+and data/corpora paths under `G:/My Drive/` — none preserved in the public
+repo. Kept alongside run_phase2_local.py as a historical record of the
+Phase 2 CKA null result. See README.md in this directory.
+==========================================================================
+"""
 import sys, json, pathlib
+
+raise SystemExit(
+    "archive/phase-2-cka/prep_eval_local.py is an archived script; the "
+    "phase34_prepare_eval module and the G:/My Drive data paths it uses "
+    "were not preserved in the public repo. See README.md for context."
+)
 
 BASE = pathlib.Path('G:/My Drive/nbs-bridge')
 DATA_DIR = pathlib.Path('G:/My Drive/nbs-survey/data')

@@ -47,4 +47,3 @@ Unique canonical SMILES: **290/303 = 95.7%** (structural diversity).
 - Single-seed (seed=42); multi-seed not run. Numeric precision (MW 11%, logP 19%) is weak, which is consistent with framework expectation at S-scale.
 - See paper §i 4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
 
-_(Original long REPORT archived at `1-research/nbs-bridge/paper-reports/smiles/REPORT.md`.)_

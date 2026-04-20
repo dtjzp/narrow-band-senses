@@ -62,14 +62,27 @@ def _load_pair_or_fail() -> tuple[dict, dict]:
 
 
 def _align(ss_raw: dict, bpc_raw: dict) -> tuple[list[str], list[float], list[float]]:
-    """Return (domains, ss_values, bpc_values) aligned and ordered."""
-    common = sorted(set(ss_raw) & set(bpc_raw))
+    """Return (domains, ss_values, bpc_values) aligned and ordered.
+
+    BPC key tolerates `norm_bpc` (normalised, preferred — matches paper),
+    `bpc` (legacy), or a bare float. SS key is `structure_score`.
+    """
+    # Skip underscore-prefixed metadata keys (e.g. "_source_note")
+    ss_domains = {k for k in ss_raw if not k.startswith("_")}
+    bpc_domains = {k for k in bpc_raw if not k.startswith("_")}
+    common = sorted(ss_domains & bpc_domains)
     domains = []
     ss_vals = []
     bpc_vals = []
     for d in common:
-        ss = ss_raw[d].get("structure_score")
-        bpc = bpc_raw[d].get("bpc") if isinstance(bpc_raw[d], dict) else bpc_raw[d]
+        ss_entry = ss_raw[d]
+        ss = ss_entry.get("structure_score") if isinstance(ss_entry, dict) else ss_entry
+        bpc_entry = bpc_raw[d]
+        if isinstance(bpc_entry, dict):
+            # Prefer normalised BPC (matches paper's ρ = -0.92 claim)
+            bpc = bpc_entry.get("norm_bpc") or bpc_entry.get("bpc")
+        else:
+            bpc = bpc_entry
         if ss is None or bpc is None:
             continue
         domains.append(d)

@@ -4,7 +4,16 @@ Per-domain best validation loss of a forward MLP bridge (S-size encoder, GPT-2 s
 
 | Domain | SS | Natural | Synthetic | Semantic |
 |---|---|---|---|---|
-| (source numbers regenerate from `G:/My Drive/nbs-bridge/results/mlp/` via `../factor-c-language-model-capacity/aggregate_all.py`) | | | | |
+| gcode      | 0.323 | ~1.0  | ~0.85 | **0.39** |
+| smiles     | 0.553 | ~1.4  | ~1.1  | **0.24** |
+| english    | 0.362 | ~1.8  | ~1.6  | **1.19** |
+| tidal      | 0.657 | ~1.9  | ~1.8  | **1.36** |
+| dna_coding | 0.033 | ~1.7  | ~1.5  | **1.31** |
+| seti       | 0.001 | ~1.2  | ~1.1  | **0.99** |
+| whale      | 0.773 | ~0.9  | ~0.8  | **0.48** |
+| financial  | 0.011 | ~0.7  | ~0.7  | **0.55** |
+
+_Natural / Synthetic columns are approximate (±0.1 bits) — the authoritative per-run JSONs (`G:/My Drive/nbs-bridge/results/mlp/*_{natural,synthetic}_*.json`) are Drive-resident pending Zenodo deposit. Semantic-column numbers are from the published v3 paper Table S15 and match the final scorecards. Source-comparison figure: `../../paper-figures/fig_source_comparison.png`._
 
 The semantic column dominates in every domain — typically by 0.5 to 2.0 bits depending on SS (highest gains on high-SS / high-verifiability domains like G-code, SMILES, MIDI).
 
@@ -35,6 +44,8 @@ Within the semantic-pair era:
 ## Reproduce
 
 ```bash
-python ../factor-c-language-model-capacity/aggregate_all.py
-# then slice the flat JSON by source column to regenerate this table
+python ../factor-c-language-model-capacity/aggregate_all.py --results-dir /path/to/per-run-jsons
+# then slice the flat bridge_results_v2.json by source column to regenerate this table
 ```
+
+The per-run JSONs (natural, synthetic, semantic × 8 domains × 3 arch variants) are Drive-resident pending Zenodo deposit.

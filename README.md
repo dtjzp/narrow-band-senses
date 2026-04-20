@@ -23,17 +23,30 @@ An information-theoretic framework that predicts *before training* which data mo
 
 Plus **variance-bound** (RNA): multi-run non-reproducibility within a single configuration; flagged as a distinct failure mode motivating the multi-seed reporting rule.
 
-## 30-minute reproduce — headline result
+## Reproduce — headline result
 
 ```bash
 git clone https://github.com/dtjzp/narrow-band-senses.git
 cd narrow-band-senses
 pip install -r requirements.txt          # PyTorch, pandas, scipy, matplotlib
 python factor-a-domain-structure/reproduce_rho.py
-# → prints Spearman ρ over 29 domains; regenerates paper-figures/fig_main_ss_correlation.png
+# → Spearman rho(SS, BPC) = -0.9236  (p = 9.29e-13, n = 29)
+# → regenerates paper-figures/fig_main_ss_correlation.{png,pdf}
 ```
 
-CPU-only. ~25 min wall-clock on a modern laptop. No Drive / Colab dependency.
+CPU-only, runs in under 30 seconds. Both pre-computed inputs ship in the repo:
+
+- **`factor-a-domain-structure/results/canonical_training_entropy.json`** — 29 domains, H₀/H₃/SS.
+- **`factor-a-domain-structure/results/bpc_per_domain.json`** — 29 domains, normalised BPC from small-Transformer fits (values transcribed from paper Tables S2a–S2b + §S6; `_source_note` field in the JSON documents the derivation).
+
+The `--recompute-ss` mode recomputes SS from raw text streams and takes ~25 min CPU, but requires the raw `{domain}_1M.txt` streams (on Drive / pending Zenodo). Regenerating BPC from scratch requires training 29 small-Transformer fits on A100 (~30 A100-hours) and is not scripted here; see paper Methods §4.6.
+
+H_win/H₀ metric (secondary predictor underpinning the three-branch failure typology) is also fully reproducible locally:
+
+```bash
+python bridges/reverse/compute_window_entropy.py --check-only
+# → prints the 11-domain H_win/H₀ table from bridges/reverse/window_entropy_results.json
+```
 
 ## Navigation
 

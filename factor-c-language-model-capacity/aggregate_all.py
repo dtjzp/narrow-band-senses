@@ -5,18 +5,29 @@ Extended (2026-04-18) to include:
 - S-model-size dimension (spec §3.5)
 - Pythia-1B LM scaling (spec §3.1)
 
+Usage:
+    python aggregate_all.py                     # uses ./results/ by default
+    python aggregate_all.py --results-dir PATH  # override
+
+Inputs: per-run JSONs produced by the bridge training pipeline. The
+authoritative corpus (~97 per-run records) is Drive-resident pending
+Zenodo deposit; when running locally, point --results-dir at a directory
+containing those per-run JSONs.
+
 Outputs:
-- G:/My Drive/nbs-bridge/results/bridge_results_v2.json — flat records
+- {results_dir}/bridge_results_v2.json — flat records
 - Prints Spearman rho tables per (arch, source, lm, s_size, metric)
 - Prints the cleanest new metric: rho(SS, zero - best) per LM scale
 """
 from __future__ import annotations
 
+import argparse
 import json, statistics
 from pathlib import Path
 from collections import defaultdict
 
-RESULTS = Path('G:/My Drive/nbs-bridge/results')
+DEFAULT_RESULTS_DIR = Path(__file__).resolve().parent / "results"
+RESULTS = DEFAULT_RESULTS_DIR  # rebound by __main__ from --results-dir if supplied
 # SS values from 1-research/nbs-survey/results/canonical_training_entropy.json (rounded to 3dp).
 # Original 8-domain set used for S-bridge experiments; 8 new domains added 2026-04-18
 # for n-extension to n=16 at XL-size (spec: 2026-04-18-nbs-n-extension-spec.md).
@@ -293,6 +304,23 @@ def save_summary(rows):
 
 
 if __name__ == '__main__':
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument('--results-dir', type=Path, default=DEFAULT_RESULTS_DIR,
+                    help=f'Directory containing per-run result JSONs. '
+                         f'Default: {DEFAULT_RESULTS_DIR}')
+    args = ap.parse_args()
+    RESULTS = args.results_dir
+
+    if not RESULTS.exists():
+        import sys
+        sys.exit(
+            f'[error] {RESULTS} does not exist. This script aggregates per-run '
+            f'bridge training outputs from a results directory — point --results-dir '
+            f'at the directory containing *_training.json / *_semantic_result.json / '
+            f'reverse/*_reverse_training.json files. The authoritative per-run '
+            f'corpus is Drive-resident pending Zenodo deposit.'
+        )
+
     bridges = collect_bridges()
     baselines = collect_baselines()
     contributions = joined_bridge_minus_baseline(bridges, baselines)

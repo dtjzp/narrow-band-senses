@@ -1,0 +1,70 @@
+{
+  "domain": "atc",
+  "seed": 42,
+  "suffix": "spec3v2_s42",
+  "total_rates": {
+    "cat_match": 0.5328467153284672,
+    "parse_ok": 1.0
+  },
+  "per_category": {
+    "climbing": {
+      "n": 32,
+      "unique_rate": 0.15625,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 0.3125,
+      "intra_hamming": 82.38,
+      "max_leakage": 0.5625
+    },
+    "mid-cruise": {
+      "n": 32,
+      "unique_rate": 0.03125,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 1.0,
+      "intra_hamming": 0.0,
+      "max_leakage": 0.0
+    },
+    "high-cruise": {
+      "n": 19,
+      "unique_rate": 0.05263157894736842,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 1.0,
+      "intra_hamming": 0.0,
+      "max_leakage": 0.0
+    },
+    "low-altitude": {
+      "n": 22,
+      "unique_rate": 0.09090909090909091,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 0.4090909090909091,
+      "intra_hamming": 109.12,
+      "max_leakage": 0.5909090909090909
+    },
+    "descending": {
+      "n": 32,
+      "unique_rate": 0.125,
+      "parse_ok_rate": 1.0,
+      "cat_match_rate": 0.09375,
+      "intra_hamming": 20.16,
+      "max_leakage": 0.90625
+    }
+  },
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "climbing: unique_rate=0.16 < 0.30",
+    "mid-cruise: unique_rate=0.03 < 0.30",
+    "mid-cruise: intra_hamming=0.0 < 20",
+    "high-cruise: unique_rate=0.05 < 0.30",
+    "high-cruise: intra_hamming=0.0 < 20",
+    "low-altitude: unique_rate=0.09 < 0.30",
+    "descending: unique_rate=0.12 < 0.30",
+    "descending: max_leakage=0.91 > 0.80"
+  ],
+  "training_meta": {
+    "best_val_loss": 0.39813665667576575,
+    "best_epoch": 24,
+    "n_train": 1082,
+    "n_val": 134,
+    "n_eval": 137,
+    "train_elapsed_sec": 146.9
+  }
+}

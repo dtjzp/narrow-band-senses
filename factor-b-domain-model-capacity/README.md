@@ -24,12 +24,12 @@ See paper §4.4 for the full treatment and supplementary S13 (S-Medium intermedi
 
 | File | Purpose |
 |---|---|
-| `train_s.py` | Canonical S-size domain-model training script. 50M params, char-level, 8 domains. |
-| `architecture.md` | Architectural details: layer count, dims, dropout, optimiser, stop criteria. |
+| `train_s.py` | Canonical S-size domain-model training script (~50M params, char-level). CLI flags for `--domains`, `--epochs`, `--data-dir`, `--ckpt-dir`. |
+| `architecture.md` | Architectural details: layer count, dims, dropout, optimiser, stop criteria. Defines S/M/XL + XS (dev-only). |
 | `results/scaling_summary.md` | Per-domain S/M/XL best-val tables + deltas. |
 | `results/xl_training_diagnostics.md` | XL train-val gap patterns (paper §S14). |
 
-M-size and XL-size training scripts live on Google Drive (`G:/My Drive/nbs-bridge/scripts/`) and are referenced from `architecture.md` but not duplicated here, as they differ from `train_s.py` only in `n_layer` / `d_model` / batch-size values. Runs were all on Colab Pro+ A100.
+M-size and XL-size training scripts are trivial variants of `train_s.py` — they differ only in `MODEL_SIZE = 'M'` / `'XL'` and a correspondingly larger `--batch-size`. Rather than duplicate the 150-line trainer, the M / XL variants live Drive-resident pending Zenodo deposit; for a fresh reviewer, the minimal reproduction is to edit `MODEL_SIZE` at the top of `train_s.py` and adjust batch size per `architecture.md`. Runs were all on Colab Pro+ A100.
 
 ## Reproduce
 

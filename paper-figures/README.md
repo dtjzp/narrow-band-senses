@@ -4,6 +4,20 @@ Cross-cutting figures used in the paper's main text. Per-domain reverse-bridge P
 
 All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 
+## Paper-caption → repo-filename mapping
+
+The paper's current captions use slightly different filenames than the repo uses internally. Use this mapping if you're reading the paper PDF and looking for a specific figure file here:
+
+| Paper caption name | Repo filename(s) | Compose script |
+|---|---|---|
+| `figure1_entropy_compressibility.{pdf,png}` | shipped under this name; `fig_main_ss_correlation.{pdf,png}` is the regenerated version from `reproduce_rho.py` | `compose_fig1.py` (+ `reproduce_rho.py`) |
+| `fig2_forward_bridge_universality.{pdf,png}` | shipped; `fig_bridge_contribution.{pdf,png}` is the alternate-naming aggregate | `compose_fig2.py` |
+| `fig3_reverse_bridge_10poc.{pdf,png}` | shipped | `compose_fig3.py` |
+| `fig4_three_branch_typology.{pdf,png}` | shipped | `compose_fig4.py` |
+| `fig5_ss_trl_playbook.{pdf,png}` | shipped | `compose_fig5.py` |
+
+All five paper-caption figures are now present as both PDF and PNG, alongside their `compose_figN.py` generation scripts. The alternate-named versions (`fig_main_ss_correlation`, `fig_bridge_contribution`, `fig_lm_scaling`, etc.) are retained for the repo-native numbering cross-referenced in this file's §3 / §4 tables below.
+
 ## §3 Entropy criterion (Factor A)
 
 | Figure | File | Shows |
@@ -16,7 +30,7 @@ All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 
 | Figure | File | Shows |
 |---|---|---|
-| Fig 2 | `fig_bridge_contribution.{png,pdf}` | Bridge-vs-zero-baseline bits across all LM scales × 8 domains |
+| Fig 2 | `fig_bridge_contribution.{png,pdf}` | Bridge-vs-zero-baseline bits across all LM scales × 16 domains |
 | Fig S6 | `fig_bridge_contribution_xl_n16.{png,pdf}` | Extended n = 16 at XL encoder |
 
 ### §4.3 LM capacity compresses SS dependence (Factor C)
@@ -33,7 +47,7 @@ All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 | Fig 4 | `fig_s_model_scaling.{png,pdf}` | Val loss vs domain-model scale (S/M/XL) |
 | Fig S11 | `fig_arch_comparison.{png,pdf}` | MLP vs Q-Former vs Linear projection (Factor B — architecture axis) |
 
-### §4.5 Reverse-bridge capability (8 domains)
+### §4.5 Reverse-bridge capability (10 domains)
 
 Per-domain scorecard + diagnostics figures live in `../bridges/reverse/{domain}/figures/`:
 
