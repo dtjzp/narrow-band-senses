@@ -181,21 +181,23 @@ No abort criterion triggered during the run. No anomalies:
 
 ## 7. Artefacts
 
+All artefacts listed below are Drive-resident in the author's workspace pending Zenodo deposit on paper acceptance. Path fragments under `nbs-bridge/` preserve the private-tree layout for provenance; reviewers needing pre-Zenodo access can contact the corresponding author.
+
 ### 7.1 Reverse-bridge (Part 1)
 
-- Driver script: `G:\My Drive\nbs-bridge\overnight\multi_seed_driver.py`
-- Per-seed training outputs: `G:\My Drive\nbs-bridge\results\reverse\{domain}_{source}_multiseed_s{seed}_reverse_{bridge.pt, generated.jsonl, training.json}`
-- Per-seed diagnostics + scorecards: `G:\My Drive\nbs-bridge\results\reverse\multi_seed\{domain}_s{seed}_{diagnostics, scorecard, generated}.{json, jsonl}`
-- Consolidated summary JSON: `G:\My Drive\nbs-bridge\results\reverse\multi_seed\multi_seed_summary.json`
-- Progress log (append-only): `G:\My Drive\nbs-bridge\_claude_scratch\multi_seed_progress.log`
+- Driver script: `nbs-bridge/overnight/multi_seed_driver.py`
+- Per-seed training outputs: `nbs-bridge/results/reverse/{domain}_{source}_multiseed_s{seed}_reverse_{bridge.pt, generated.jsonl, training.json}`
+- Per-seed diagnostics + scorecards: `nbs-bridge/results/reverse/multi_seed/{domain}_s{seed}_{diagnostics, scorecard, generated}.{json, jsonl}`
+- Consolidated summary JSON: `nbs-bridge/results/reverse/multi_seed/multi_seed_summary.json`
+- Progress log (append-only): `nbs-bridge/_claude_scratch/multi_seed_progress.log`
 
 ### 7.2 Forward-bridge (Part 2)
 
-- Driver script: `G:\My Drive\nbs-bridge\overnight\forward_multi_seed_driver.py`
-- Per-seed training outputs: `G:\My Drive\nbs-bridge\results\mlp\{domain}_semantic_pythia1b_sXL_multiseed_s{seed}_{bridge.pt, generated.jsonl, training.json}`
-- Per-seed result JSONs (for resume): `G:\My Drive\nbs-bridge\results\mlp\multi_seed\{domain}_s{seed}_result.json`
-- Consolidated summary JSON: `G:\My Drive\nbs-bridge\results\mlp\multi_seed\forward_multi_seed_summary.json`
-- Progress log: `G:\My Drive\nbs-bridge\_claude_scratch\forward_multi_seed_progress.log`
+- Driver script: `nbs-bridge/overnight/forward_multi_seed_driver.py`
+- Per-seed training outputs: `nbs-bridge/results/mlp/{domain}_semantic_pythia1b_sXL_multiseed_s{seed}_{bridge.pt, generated.jsonl, training.json}`
+- Per-seed result JSONs (for resume): `nbs-bridge/results/mlp/multi_seed/{domain}_s{seed}_result.json`
+- Consolidated summary JSON: `nbs-bridge/results/mlp/multi_seed/forward_multi_seed_summary.json`
+- Progress log: `nbs-bridge/_claude_scratch/forward_multi_seed_progress.log`
 
 ### 7.3 Repo copies (for version control)
 
