@@ -62,7 +62,6 @@ os.makedirs(PROCESSED_DIR, exist_ok=True)
 PICKLE_PATH = os.path.join(DATA_DIR, 'hmc_realistic_dataset.pickle')
 RESULTS_PATH = os.path.join(RESULTS_DIR, 'hormonal_entropy.json')
 TEXT_LOCAL = os.path.join(PROCESSED_DIR, 'hormonal_1M.txt')
-TEXT_GDRIVE = 'G:/My Drive/nbs-survey/data/hormonal_1M.txt'
 
 CHANNEL_NAMES = ['LH', 'FSH', 'E2', 'P4', 'Ih']
 N_BINS = 20
@@ -260,15 +259,6 @@ def save_processed_text(data):
     with open(TEXT_LOCAL, 'w') as f:
         f.write(concat)
     print(f'  Saved {len(concat):,} chars to {TEXT_LOCAL}')
-
-    # Try Google Drive path
-    gdrive_dir = os.path.dirname(TEXT_GDRIVE)
-    if os.path.exists(gdrive_dir):
-        with open(TEXT_GDRIVE, 'w') as f:
-            f.write(concat)
-        print(f'  Also saved to {TEXT_GDRIVE}')
-    else:
-        print(f'  Google Drive not accessible ({gdrive_dir} not found), skipping')
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────

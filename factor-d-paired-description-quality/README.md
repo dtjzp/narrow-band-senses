@@ -37,7 +37,7 @@ This finding is why the reverse-bridge chapter exists: without Factor D's insigh
 | `labeller_template.md` | Specification every semantic labeller must obey: input contract, output schema, determinism, round-trip accuracy target. |
 | `results/source_comparison_summary.md` | Per-domain best-val loss broken out by source kind (natural/synthetic/semantic). |
 
-Canonical per-domain semantic labellers live at `G:/My Drive/nbs-bridge/scripts/{domain}_semantic_labeller.py`. Mirrored to Zenodo on publication.
+Canonical per-domain semantic labellers are Drive-resident pending Zenodo deposit on paper acceptance. See [`semantic-labellers/README.md`](semantic-labellers/README.md) and [`claim-verifiers/README.md`](claim-verifiers/README.md) for the current placeholder, interface contract ([`labeller_template.md`](labeller_template.md)), and corresponding-author contact for early access.
 
 ## Why "verifiable"?
 

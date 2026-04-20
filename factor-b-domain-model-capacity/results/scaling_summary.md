@@ -1,6 +1,6 @@
 # Factor B — Scaling Summary
 
-Authoritative per-run numbers live in `G:/My Drive/nbs-bridge/results/bridge_results_v2.json` (97-row flat records; `scripts/aggregate_all.py` regenerates it from per-run JSONs). The headline tables below are derived from that file.
+Authoritative per-run numbers aggregate into `bridge_results_v2.json` (97-row flat records; Drive-resident pending Zenodo DOI). `../factor-c-language-model-capacity/aggregate_all.py` regenerates it from a directory of per-run JSONs given via `--results-dir`. The headline tables below are derived from that aggregate.
 
 ## S-size forward bridge: best-val by domain
 
@@ -46,9 +46,7 @@ At constrained LM scale (GPT-2 small), **encoder capacity matters**: ρ(SS, S→
 
 ```bash
 cd factor-b-domain-model-capacity
-# Assumes G:/My Drive/nbs-bridge/results/ is accessible as described in
-# ../factor-c-language-model-capacity/README.md
-python ../factor-c-language-model-capacity/aggregate_all.py
+python ../factor-c-language-model-capacity/aggregate_all.py --results-dir /path/to/per-run-jsons
 ```
 
-Output: flat results JSON + correlation table on stdout.
+Output: flat results JSON + correlation table on stdout. The per-run JSONs come from `train_s.py` (S-size; shipped) and its M / XL variants (Drive-resident pending Zenodo).

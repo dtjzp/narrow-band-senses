@@ -64,18 +64,20 @@ Training time: ~2-5 min on A100 per PoC at BAL-1600 semantic pairs.
 
 ## Corpus shape
 
-Each PoC uses a balanced paired corpus. Canonical target: **1280-1600 pairs**, balanced across **4-5 categories** (320 per category). Categories are domain-specific and data-driven:
+Each PoC uses a balanced paired corpus. Canonical target: **1280-2400 pairs**, balanced across **4-5 categories** (~320 per category). Categories are domain-specific and data-driven — the per-domain labellers produce the category-level structure; these are the categories as they appear in the committed `decision_checkpoint.json` / `scorecard_heldout_temp08.json` for each PoC:
 
-- G-code: `perimeter, travel, retraction, mixed` + extension
-- MIDI: `simple_tonal, complex_tonal, atonal, percussive` (5th category dropped if < 5%)
-- SMILES: chemical-class categories (drug-like, simple, polycyclic, etc.)
-- Python: `arithmetic, loop, conditional, collection, complex`
-- Network: `zero-dense, nine-heavy, five-heavy, one-heavy` (data-driven from observed 0-9 digit distribution)
-- Quantum: gate-composition (1-qubit, entangling, deep, random)
-- RNA: `simple-hairpin, nested-helical, bulge-rich, multiloop` + pseudoknot dropped
-- DNA coding: `high-GC, mid-GC, low-GC, with-ORF` (homopolymer-rich dropped)
+- **G-code**: `extrusion, travel, mixed, retraction, accel` (BAL-2400)
+- **MIDI**: `tonal, ascending-run, descending-run, leap-dominant, mixed` (BAL-1600)
+- **SMILES**: chemical-class categories (drug-like, simple, polycyclic, etc.); legacy PoC, see `smiles/REPORT.md`
+- **Python**: `arithmetic, loop, conditional, collection, complex` (BAL-1600, window=400)
+- **Network**: `zero-dense, nine-heavy, five-heavy, one-heavy` (BAL-1280; data-driven from observed 0-9 digit distribution)
+- **Quantum**: `parameterised, highly-entangled, measurement-heavy, entangling, single-qubit` (BAL-1468; `entangling` at ~12% of samples)
+- **RNA**: `simple-hairpin, nested-helical, bulge-rich, multiloop` (pseudoknot dropped as < 5%)
+- **DNA coding**: `high-GC, mid-GC, low-GC, with-ORF` (homopolymer-rich dropped)
+- **ATC**: `climbing, descending, mid-cruise, low-altitude, high-cruise` (BAL-1353; Spec 3 v2)
+- **Reactions**: `addition, elimination, substitution, rearrangement` (BAL-1280; Spec 3 v2)
 
-Category rule is a deterministic classifier over a 200-character window (except Python at 400). See each per-domain labeller.
+Category rule is a deterministic classifier over a 200-character window (except Python + Reactions at 400). See each per-domain labeller (templates in `../../factor-d-paired-description-quality/labeller_template.md`; domain-specific labellers pending Zenodo deposit).
 
 ## Decoding
 

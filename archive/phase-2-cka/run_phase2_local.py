@@ -1,6 +1,34 @@
-"""Run Phase 2 CKA locally on CPU (adapts paths from Colab to G: drive)."""
+"""Run Phase 2 CKA locally on CPU (adapts paths from Colab to G: drive).
+
+=== ARCHIVED — NOT RUNNABLE AS SHIPPED ===================================
+
+This script is preserved as a historical record of the Phase 2 CKA null
+result (see README.md in this directory). It was adapted from a Colab
+notebook and depends on:
+
+  1. A `phase2_cka.py` module that lived at `G:/My Drive/nbs-bridge/scripts/`
+     in the author's workspace and was NEVER PORTED to this public repo.
+  2. Survey code / data paths under `G:/My Drive/` which are not present
+     on any fresh clone.
+
+Attempting to run it will fail at `import phase2_cka as p2`. The
+canonical record of the Phase 2 outcome (ρ(SS, CKA) ≈ 0 on synthetic
+pairs, ≈ 0.1 on natural pairs, null) lives in:
+
+  1-research/nbs-experiment/results/correlation_results.json (ρ = -0.045, n=10)
+
+and is summarised in this directory's README.md §"What happened".
+
+==========================================================================
+"""
 import sys
 from pathlib import Path
+
+raise SystemExit(
+    "archive/phase-2-cka/run_phase2_local.py is an archived script; "
+    "the `phase2_cka` module it imports was not preserved in the public "
+    "repo. See README.md in this directory for the Phase 2 CKA outcome."
+)
 
 # Point at G: drive paths (Drive Desktop mount)
 G = Path('G:/My Drive')

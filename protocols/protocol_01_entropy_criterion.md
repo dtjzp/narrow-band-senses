@@ -52,12 +52,12 @@ Each has its own citation and (where required) registration.
 
 1. Clone the companion repository:
    ```bash
-   git clone https://github.com/<user>/nbs-bridge-public
-   cd nbs-bridge-public/factor-a-domain-structure
+   git clone https://github.com/dtjzp/narrow-band-senses
+   cd narrow-band-senses
    pip install -r requirements.txt
    ```
-2. Download per-domain raw data as documented in `data/SOURCES.md`. Some corpora require academic-use registration; budget ~30 min for this step.
-3. Verify `entropy.py` tests pass (if any are shipped): `python -m pytest` from the `../nbs-experiment/` directory.
+2. Download per-domain raw data as documented in `factor-a-domain-structure/data/SOURCES.md`. Some corpora require academic-use registration; budget ~30 min for this step.
+3. Quick-sanity check: `python factor-a-domain-structure/reproduce_rho.py` should print `Spearman rho(SS, BPC) = -0.9236` using the shipped canonical_training_entropy.json + bpc_per_domain.json (no raw data needed).
 
 ## Procedure
 

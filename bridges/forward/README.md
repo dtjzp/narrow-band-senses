@@ -47,27 +47,25 @@ Training time: ~30 min / domain at Pythia-1B × XL encoder on A100.
 
 ## Reproduce one domain
 
+The canonical forward-bridge trainer (`phase34_bridge.py`) is Drive-resident pending Zenodo deposit — it's a ~200-line script that instantiates a frozen Pythia-1B, a frozen domain encoder, and a 2-layer MLP bridge, then trains the bridge with AdamW per the hyperparameters above. The intended invocation is:
+
 ```bash
-cd bridges/forward
 python train_mlp_bridge.py --domain gcode --lm pythia1b --s_size XL
 ```
 
-(Script is a pointer — lives in `G:/My Drive/nbs-bridge/scripts/phase34_bridge.py`; copied/adapted into the repo on publication.)
+Expected output: bridge checkpoint (`*_mlp.pt`) + per-run training JSON that aggregates into `../factor-c-language-model-capacity/aggregate_all.py`'s input.
 
-Expected output:
-- checkpoint: `G:/My Drive/nbs-bridge/results/mlp/gcode_semantic_pythia1b_sXL_mlp.pt`
-- training JSON: `.../mlp/gcode_semantic_pythia1b_sXL_training.json`
-- val loss should converge near 0.24 (domain-dependent; see Factor B scaling summary)
+Val loss converges near 0.24 for G-code (domain-dependent; see Factor B scaling summary).
 
 ## Degeneracy controls
 
 Every forward-bridge headline run is accompanied by two baseline controls, per paper §4.8:
 
 ### Zero-conditioning baseline
-The MLP output is replaced with `n_soft` zero embeddings; LM is then asked to produce the same description with no domain conditioning. Val loss is always higher than trained bridge. Script: [`diagnostics/zero_baseline_control.py`](diagnostics/zero_baseline_control.py).
+The MLP output is replaced with `n_soft` zero embeddings; LM is then asked to produce the same description with no domain conditioning. Val loss is always higher than trained bridge. _Baseline-control script is Drive-resident pending Zenodo deposit._
 
 ### Random-prompt baseline
-The MLP output is replaced with a random draw from the LM's own embedding matrix (5 seeds averaged). Ensures the LM is not just using "any prefix as a hint" — random embeddings should perform worse than targeted ones, and they do. Script: [`diagnostics/random_baseline_control.py`](diagnostics/random_baseline_control.py).
+The MLP output is replaced with a random draw from the LM's own embedding matrix (5 seeds averaged). Ensures the LM is not just using "any prefix as a hint" — random embeddings should perform worse than targeted ones, and they do. _Baseline-control script is Drive-resident pending Zenodo deposit._
 
 Both baselines form the `zero − best` and `random − best` bits numbers reported in the paper's bridge-contribution figures.
 

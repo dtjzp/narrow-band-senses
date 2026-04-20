@@ -121,29 +121,36 @@ verdict: FAIL (unique_rate_fail AND intra_cat_distance_fail)
 
 The aggregate 50% cat-match is the sum of two attractors (nine-heavy and zero-dense; the bridge's nine-heavy attractor happens to score high zero-density too). Not a capability number.
 
-### Quantum (PASS)
+### Quantum (PASS) — seed-42 single-run
 
 ```
-per_category:
-  1-qubit:    unique=37.5%, intra=18.3, cat-match=56.25%
-  entangling: unique=78.1%, intra=42.7, cat-match=84.4%
-  deep:       unique=90.6%, intra=61.1, cat-match=87.5%
-  random:     unique=93.8%, intra=58.2, cat-match=80.3%
-cross-leak-to-dominant: 32%
+per_category (n=20-32):
+  parameterised:     unique=93.8%, intra=61.1, cat-match=62.5%
+  highly-entangled:  unique=93.8%, intra=58.2, cat-match=90.6%
+  measurement-heavy: unique=78.1%, intra=42.7, cat-match=93.8%
+  entangling:        unique=85.0%, intra=48.3, cat-match=40.0%
+  single-qubit:      unique=37.5%, intra=18.3, cat-match=84.4%
+cross-leak-to-dominant: ~20%
 verdict: PASS
 ```
 
-Typical high-SS / high-capability pattern: unique rates 78–94% for three categories, 1-qubit drops to 37.5% (short programs repeat naturally — soft pass). Cat-match 77% aggregate is a real capability number because no single category dominates and diversity is real.
+Typical high-SS / high-capability pattern: unique rates 78–94% for four categories, single-qubit drops to 37.5% (short gate-only programs repeat naturally — soft pass per Spec 2 §5.1). Cat-match 77% aggregate is a real capability number because no single category dominates and diversity is real. 5-seed mean ± SD: cat-match 70.4% ± 4.0, Stable PASS per `../multi-seed-report.md` §3.1.
 
 ## What a FAIL headline means
 
-The verdict is **not** "the paper's framework is wrong." For low-SS domains (Network 0.126, DNA coding 0.033), FAIL *validates* the §4.7 TRL playbook's prediction: reverse bridging at SS < 0.15 does not support generative use at S-size under the standard recipe. Report honestly as framework-validation.
+The verdict is **not** "the paper's framework is wrong." For low-SS domains (Network 0.126, DNA coding 0.033), FAIL *validates* the §4.5 SS × TRL playbook's prediction: reverse bridging at SS < 0.15 does not support generative use at S-size under the standard recipe. Report honestly as framework-validation.
 
-For high-SS domains (RNA 0.675), FAIL is an informative counter-example: SS is **necessary but not sufficient**. Vocabulary dimensionality, category separability, and architecture/corpus/sampling all matter. RNA reruns are ongoing at time of writing.
+For within-window-attractor FAILs (bioreactor 0.931, ATC 0.563, MIDI-XL), FAIL reflects **low H_win/H₀** — the bridge collapses to per-category prototype sequences despite high aggregate SS. See `../window_entropy_results.json` for the 11-domain metric values; Spearman ρ(H_win/H₀, PASS) = +0.73 on the n=8 PASS + attractor-FAIL subset.
+
+For compositional-hierarchy FAILs (reactions 0.449), char-level training cannot assemble the higher-order `reactants>>products` structure even though local token-level generation is plausible. Distinct from within-window-attractor: here parse itself fails.
+
+RNA (0.675) is a **variance-bound** FAIL — across 9 recipe iterations, identical settings produced substantially different unique-gen rates on rerun. Motivated the multi-seed reporting rule (§4.6 of the paper).
 
 ## References
 
-- Paper §4.5 (reverse-bridge cross-domain synthesis)
-- Paper §6.2 (limitations — includes this diagnostic gate)
-- Overnight summary v2 — reverse-bridge set to n=8
-- Handover spec §3.1 Critical review protocol (methodology lesson)
+- Paper §4.3 (reverse-bridge cross-domain synthesis, 10 domains)
+- Paper §4.5 (SS × TRL playbook with H_win/H₀ two-metric screening)
+- Paper §4.6 (methodology — diagnostic gate + multi-seed rule)
+- Paper §6.2 (limitations)
+- `../multi-seed-report.md` — 5-seed Stable PASS rubric (Quantum, Python)
+- `../../factor-d-paired-description-quality/labeller_template.md` — per-domain labeller template
