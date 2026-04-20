@@ -12,11 +12,13 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from config import MODEL_CONFIGS, TRAIN_CONFIG, DISCRETE_DOMAINS, TARGET_CHARS
-from config import TRAIN_FRAC, VAL_FRAC
-from model import CharTransformer
-from dataset import CharDataset, build_vocab, encode_text
-from evaluate import compute_bpc
+from experiment.code.config import (
+    MODEL_CONFIGS, TRAIN_CONFIG, DISCRETE_DOMAINS, TARGET_CHARS,
+    TRAIN_FRAC, VAL_FRAC,
+)
+from experiment.code.model import CharTransformer
+from experiment.code.dataset import CharDataset, build_vocab, encode_text
+from experiment.code.evaluate import compute_bpc
 
 
 def train_one_run(

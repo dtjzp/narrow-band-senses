@@ -8,17 +8,15 @@ All figures: CC-BY 4.0. Raster at 200 dpi; vector PDF alongside.
 
 The paper's current captions use slightly different filenames than the repo uses internally. Use this mapping if you're reading the paper PDF and looking for a specific figure file here:
 
-| Paper caption name | Repo filename | Status |
+| Paper caption name | Repo filename(s) | Compose script |
 |---|---|---|
-| `figure1_entropy_compressibility.pdf` | `fig_main_ss_correlation.{png,pdf}` | present |
-| `fig2_forward_bridge_universality.pdf` | `fig_bridge_contribution.{png,pdf}` | present |
-| `fig3_reverse_bridge_10poc.pdf` | — | **pending generation** |
-| `fig4_three_branch_typology.pdf` | — | **pending generation** |
-| `fig5_ss_trl_playbook.pdf` | — | **pending generation** |
+| `figure1_entropy_compressibility.{pdf,png}` | shipped under this name; `fig_main_ss_correlation.{pdf,png}` is the regenerated version from `reproduce_rho.py` | `compose_fig1.py` (+ `reproduce_rho.py`) |
+| `fig2_forward_bridge_universality.{pdf,png}` | shipped; `fig_bridge_contribution.{pdf,png}` is the alternate-naming aggregate | `compose_fig2.py` |
+| `fig3_reverse_bridge_10poc.{pdf,png}` | shipped | `compose_fig3.py` |
+| `fig4_three_branch_typology.{pdf,png}` | shipped | `compose_fig4.py` |
+| `fig5_ss_trl_playbook.{pdf,png}` | shipped | `compose_fig5.py` |
 
-The three "pending generation" figures are referenced in the paper's Results section but have not yet been composed; see the paper's figure-composition spec (`docs/superpowers/specs/2026-04-19-nbs-figure-composition-spec.md` in the author's workspace).
-
-Paper captions will be reconciled to the repo filenames (or vice versa) before submission.
+All five paper-caption figures are now present as both PDF and PNG, alongside their `compose_figN.py` generation scripts. The alternate-named versions (`fig_main_ss_correlation`, `fig_bridge_contribution`, `fig_lm_scaling`, etc.) are retained for the repo-native numbering cross-referenced in this file's §3 / §4 tables below.
 
 ## §3 Entropy criterion (Factor A)
 

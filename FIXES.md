@@ -88,3 +88,66 @@ Before this branch merges to `main` and before the GitHub URL is sent to Brown:
 2. Either ship `bpc_per_domain.json` or confirm the README's Zenodo-pending framing is acceptable to stand.
 3. Consider whether the three pending figures need to be composed before submission or can follow as a separate commit.
 4. Spec 2 (execution reproducibility) is running in parallel — its findings may surface additional blockers that this pass didn't address.
+
+---
+
+## Second pass — 2026-04-20
+
+All four "deferred" items above now resolved in commit on branch `post-overhaul-fixes-2026-04-20`:
+
+### Item 1 — S-model architecture mismatch: FIXED in code
+
+Git history confirmed: `experiment/code/config.py` was last touched in the 2026-04-14 initial release and still carried the pre-bridge-era model sizes. `factor-b-domain-model-capacity/architecture.md` is the authoritative version (matches paper text).
+
+`MODEL_CONFIGS` updated:
+
+| Scale | Before (stale) | After (paper) |
+|---|---|---|
+| XS | n_layers=2, d_model=128, n_heads=2 (~1M) | unchanged (retained as dev/prototype size, not in paper) |
+| S  | n_layers=4, d_model=256, n_heads=4 (~4M) | **n_layers=6, d_model=512, n_heads=8 (~50M)** |
+| M  | n_layers=8, d_model=512, n_heads=8 (~50M) | **n_layers=12, d_model=768, n_heads=12 (~130M)** |
+| L/XL | L: n_layers=12, d_model=768, n_heads=12 (~130M) | **renamed to XL: n_layers=24, d_model=1024, n_heads=16 (~380M)** |
+
+Param-count comments added inline. "L" key removed — paper uses "XL" for the 380M scale.
+
+### Item 2 — `bpc_per_domain.json`: SHIPPED
+
+File existed at `1-research/nbs-survey/shared-denominator-defence/bpc_per_domain.json` (in the author's private tree) — transcribed from paper Tables S2a, S2b, and §S6. Copied to `factor-a-domain-structure/results/bpc_per_domain.json`. `_source_note` field in the JSON documents the derivation from paper sources.
+
+`reproduce_rho.py` had a minor mismatch — it expected a `bpc` key; the JSON uses `norm_bpc` and `raw_bpc`. Script updated to prefer `norm_bpc` (matches paper's ρ = −0.92 claim), fall back to `bpc`, and skip `_source_note` metadata keys.
+
+**Verified end-to-end**: `python factor-a-domain-structure/reproduce_rho.py` now prints:
+
+```
+Spearman rho(SS, BPC) = -0.9236
+p-value                = 9.293e-13
+n domains              = 29
+[ok] wrote .../paper-figures/fig_main_ss_correlation.png + .pdf
+```
+
+Matches paper's ρ = −0.92 to two decimals. **30-second reproduce path now works out of a fresh clone with no external dependencies.**
+
+### Item 3 — fig3/4/5 pending generation: SHIPPED
+
+All five paper-caption figures exist in the author's scaffold at `1-research/nbs-bridge-public/paper-figures/`. Copied into the clone:
+
+- `figure1_entropy_compressibility.{pdf,png}` (also from `3-drafts/`)
+- `fig2_forward_bridge_universality.{pdf,png}`
+- `fig3_reverse_bridge_10poc.{pdf,png}`
+- `fig4_three_branch_typology.{pdf,png}`
+- `fig5_ss_trl_playbook.{pdf,png}`
+
+Plus the `compose_fig{1..5}.py` generation scripts — so each paper-caption figure is reproducible from its source data.
+
+Note: earlier figure copies (`fig_main_ss_correlation`, `fig_bridge_contribution`, etc.) are retained because other docs (`factor-c/README.md`, `paper-figures/README.md` section headings) reference them. `paper-figures/README.md` paper-caption-mapping table updated to reflect the dual naming.
+
+### Item 4 — `experiment/code/train.py` bare imports: FIXED
+
+Bare `from config import ...`, `from model import ...`, `from dataset import ...`, `from evaluate import ...` replaced with `from experiment.code.{config,model,dataset,evaluate} import ...`. Script is now importable / runnable from the repo root, consistent with `factor-b/train_s.py`'s usage. Other files in `experiment/code/` don't have bare imports that need the same fix (verified via grep).
+
+## Still deferred (post-merge work)
+
+- `factor-b/architecture.md` documentation uses "S/M/XL" naming; `experiment/code/config.py` now matches for S/M/XL but retains "XS" as a dev size. Minor cosmetic alignment possible but not load-bearing.
+- Per-domain entropy JSONs (12 of 29) still missing individually under `factor-a/results/per-domain/` — the aggregate `canonical_training_entropy.json` has all 29, so this is cosmetic completeness rather than a blocker.
+- Archive `phase-2-cka/run_phase2_local.py` still imports a `phase2_cka` module not in the repo. Archive READMEs should flag this but don't yet. Low priority — archive is explicitly historical.
+- Stale worked-example categories in `mode-collapse-diagnostics.md` + `architecture.md` (MIDI category list). Cosmetic; not blocking.

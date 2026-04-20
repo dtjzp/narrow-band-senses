@@ -30,17 +30,18 @@ git clone https://github.com/dtjzp/narrow-band-senses.git
 cd narrow-band-senses
 pip install -r requirements.txt          # PyTorch, pandas, scipy, matplotlib
 python factor-a-domain-structure/reproduce_rho.py
-# → prints Spearman ρ over 29 domains; regenerates paper-figures/fig_main_ss_correlation.png
+# → Spearman rho(SS, BPC) = -0.9236  (p = 9.29e-13, n = 29)
+# → regenerates paper-figures/fig_main_ss_correlation.{png,pdf}
 ```
 
-The script requires two pre-computed inputs:
+CPU-only, runs in under 30 seconds. Both pre-computed inputs ship in the repo:
 
-- **`factor-a-domain-structure/results/canonical_training_entropy.json`** (29 domains, H₀/H₃/SS) — **shipped in this repo**.
-- **`factor-a-domain-structure/results/bpc_per_domain.json`** (29 domains, bits-per-character from ~50M-param character transformers) — **pending Zenodo deposit**. Each BPC value requires ~1 hour of training on A100 per domain; the full table is ~30 A100-hours. Until the Zenodo DOI is live, contact the corresponding author for the JSON.
+- **`factor-a-domain-structure/results/canonical_training_entropy.json`** — 29 domains, H₀/H₃/SS.
+- **`factor-a-domain-structure/results/bpc_per_domain.json`** — 29 domains, normalised BPC from small-Transformer fits (values transcribed from paper Tables S2a–S2b + §S6; `_source_note` field in the JSON documents the derivation).
 
-When both JSONs are present, the reproduce path is CPU-only and runs in ~30 seconds (not a training run — it's a Spearman correlation over the two shipped JSONs). The `--recompute-ss` mode recomputes SS from raw text streams and takes ~25 min CPU, but also requires the raw streams (on Drive / pending Zenodo).
+The `--recompute-ss` mode recomputes SS from raw text streams and takes ~25 min CPU, but requires the raw `{domain}_1M.txt` streams (on Drive / pending Zenodo). Regenerating BPC from scratch requires training 29 small-Transformer fits on A100 (~30 A100-hours) and is not scripted here; see paper Methods §4.6.
 
-H_win/H₀ metric (secondary predictor, three-branch typology) is shipped in full:
+H_win/H₀ metric (secondary predictor underpinning the three-branch failure typology) is also fully reproducible locally:
 
 ```bash
 python bridges/reverse/compute_window_entropy.py --check-only
