@@ -99,6 +99,19 @@ cd bridges/reverse/quantum
 
 Wall-clock on A100: 2–5 min training + 1 min eval. The full 10-domain set completes in ~30 minutes of A100 time plus corpus-building time (labellers are per-domain; see [`../../factor-d-paired-description-quality/labeller_template.md`](../../factor-d-paired-description-quality/labeller_template.md)).
 
+### Re-derive a scorecard from shipped generations (no GPU)
+
+Quantum ships a CPU-only replay scorer at [`quantum/score.py`](quantum/score.py):
+
+```bash
+python bridges/reverse/quantum/score.py --compare
+```
+
+It re-derives `scorecard_heldout_temp08.json`'s `total`, `per_category`, and
+`total_rates` fields from `poc_generated_temp08.jsonl` in under 5 seconds.
+The other 9 reverse-bridge PoCs use the same scoring protocol but have not
+yet had their private labellers ported — that is tracked as follow-up work.
+
 ## How to read a PoC REPORT
 
 1. **Check the Verdict field first** in the Held-out evaluation section. Enum: `Stable PASS`, `PASS`, `PASS (Tests A + B)`, `PASS at S / FAIL at XL`, `PASS-legacy`, `FAIL`.

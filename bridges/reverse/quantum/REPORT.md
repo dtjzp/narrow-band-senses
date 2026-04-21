@@ -46,3 +46,20 @@ Generated: 2026-04-18 22:09:54 (5-seed update: 2026-04-19)
 - 5-seed means/SDs from `1-research/nbs-bridge/multi-seed-report.md` §3.1; feature-match column reports seed-42 value (per-seed feature breakdown not exported in multi-seed driver).
 - Stable PASS per Spec 2 rubric (cat-match SD ≤ 5pp, 5/5 seeds PASS). Single-qubit unique-gen 41% soft-passes per Spec 2 §5.1 (short gate-heavy programs repeat naturally at n=20).
 - See paper §4.3 and `mode-collapse-diagnostics.md` for cross-PoC context.
+
+## Reproducibility
+
+The scorecard above is re-derivable end-to-end from the shipped generations
+via [`score.py`](score.py):
+
+```bash
+python bridges/reverse/quantum/score.py --compare
+```
+
+CPU-only, <5 s, zero network. Match against `scorecard_heldout_temp08.json`
+is exact (tolerance 1e-10). `score.py` is a regex-based labeller port —
+no qiskit / pyqasm parser required. See the script's module docstring for
+the split between re-derived fields (total / per_category / total_rates)
+and snapshotted upstream fields (roundtrip_rate, decision_checkpoint,
+training_meta). Run `python bridges/reverse/quantum/score.py --self-test`
+for the internal labeller sanity checks.

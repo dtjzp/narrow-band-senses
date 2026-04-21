@@ -51,6 +51,13 @@ def train_one(domain: str, data_dir: Path, ckpt_dir: Path,
     if not text_path.exists():
         raise FileNotFoundError(f'missing training text: {text_path}')
     text = text_path.read_text(encoding='utf-8')
+    # DISCRETE_DOMAINS (experiment/code/config.py) lists only domains whose
+    # training sequences are independent "programs" glued with <SEP>, where
+    # the tokeniser needs to know about the separator so it can mask across
+    # boundaries during eval. Quantum is NOT in DISCRETE_DOMAINS: the QASM
+    # concatenated stream uses <SEP> as a plain-text separator and is
+    # processed as a single raw character stream. sep_token=None in the
+    # quantum checkpoint is therefore correct, not a missing value.
     is_discrete = domain in DISCRETE_DOMAINS
     vocab, inv_vocab = build_vocab(text, add_sep=is_discrete)
     sep_token = '<SEP>' if is_discrete else None
