@@ -434,6 +434,20 @@ def main():
         json.dump(results, f, indent=2)
     print(f"\nResults saved to {RESULTS_FILE}")
     print(f"QASM files saved to {DATA_DIR}/")
+
+    # Auto-emit the concatenated stream that factor-b-domain-model-capacity/
+    # train_s.py --domains quantum expects (default --data-dir is
+    # experiment/code/data/). Without this, a fresh-clone reviewer has to
+    # run a manual concat cell — see Spec 2 T9 Cell 5 workaround.
+    concat_dir = Path(__file__).resolve().parents[2] / "experiment" / "code" / "data"
+    concat_dir.mkdir(parents=True, exist_ok=True)
+    concat_path = concat_dir / "quantum_1M.txt"
+    with open(concat_path, "w", encoding="utf-8") as f:
+        for _, qasm in all_circs:
+            f.write(qasm)
+            f.write("<SEP>")
+    size = concat_path.stat().st_size
+    print(f"Concatenated stream: {concat_path} ({size:,} bytes)")
     print("=" * 60)
 
 
