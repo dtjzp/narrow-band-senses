@@ -22,9 +22,18 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 from collections import Counter
 from pathlib import Path
 from statistics import mean, stdev
+
+# Force utf-8 stdout so the final ρ line prints cleanly on default cp1252
+# Windows consoles. No-op on Python < 3.7 — users should set
+# PYTHONIOENCODING=utf-8 manually in that case.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 RESULTS_JSON = SCRIPT_DIR / "window_entropy_results.json"
